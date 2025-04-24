@@ -6,13 +6,15 @@ const height = window.innerHeight;
 const radius = Math.min(width, height) / 2;
 
 const svg = d3.select("#grafo-container")
-.append("svg")
-.attr("width", "100%")
-.attr("height", "100%")
-.attr("viewBox", `0 0 ${width} ${height}`)
-.attr("preserveAspectRatio", "xMidYMid meet")
-.append("g")
-.attr("transform", `translate(${width / 2}, ${height / 2})`);
+  .append("svg")
+  .attr("width", "100%")
+  .attr("height", "100%")
+  .attr("viewBox", `0 0 ${width} ${height}`)
+  .attr("preserveAspectRatio", "xMidYMid meet");
+
+const graphGroup = svg.append("g")
+  .attr("transform", `translate(${width / 2}, ${height / 2})`);
+
 
 
 // Escala de cores para níveis
@@ -52,7 +54,7 @@ d3.json("radial.json").then(data => {
     console.log("Links gerados:", root.links());
 
     // Desenha os links
-    svg.append("g")
+    graphGroup.append("g")
         .selectAll("path")
         .data(root.links())
         .enter().append("path")
@@ -68,7 +70,7 @@ d3.json("radial.json").then(data => {
         .style("stroke-opacity", 1);
 
     // Desenha os e colorindo os nós
-    const node = svg.append("g")
+    const node = graphGroup.append("g")
         .selectAll("g")
         .data(root.descendants())
         .enter().append("g")
@@ -137,6 +139,25 @@ d3.json("radial.json").then(data => {
                 (relatedNodes.has(link.source) && relatedNodes.has(link.target)) ? 1 : 0.2);
     });
 
+    let currentTransform = d3.zoomIdentity.translate(width / 2, height / 2).scale(1);
+    svg.call(zoom).call(zoom.transform, currentTransform);
+
+
+    document.getElementById("zoom-in").addEventListener("click", () => {
+        currentTransform = currentTransform.scale(1.2);
+        svg.transition().duration(300).call(zoom.transform, currentTransform);
+    });
+
+    document.getElementById("zoom-out").addEventListener("click", () => {
+        currentTransform = currentTransform.scale(0.8);
+        svg.transition().duration(300).call(zoom.transform, currentTransform);
+    });
+
+    document.getElementById("zoom-reset").addEventListener("click", () => {
+        currentTransform = d3.zoomIdentity.translate(width / 2, height / 2).scale(1);
+        svg.transition().duration(300).call(zoom.transform, currentTransform);
+    });
+
     // Evento para restaurar tudo ao estado original ao clicar fora do grafo
     d3.select("body").on("click", function () {
         svg.selectAll("circle").attr("opacity", 1);
@@ -157,12 +178,12 @@ d3.json("radial.json").then(data => {
     
     // Adiciona zoom e pan
     const zoom = d3.zoom()
-        .scaleExtent([0.5, 5])
-        .on("zoom", (event) => {
-            svg.attr("transform", event.transform);
-        });
-
-    d3.select("svg").call(zoom);
+    .scaleExtent([0.5, 5])
+    .on("zoom", (event) => {
+      graphGroup.attr("transform", event.transform);
+    });  
+  
+    svg.call(zoom);
 
     // Ajusta o comportamento do zoom para centralizar no cursor
     d3.select("svg").on("dblclick.zoom", function (event) {

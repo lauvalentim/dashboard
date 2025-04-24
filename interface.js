@@ -1,4 +1,3 @@
-// Menu de Informações
 document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.getElementById("menu-toggle");
     const openAnalisesBtn = document.getElementById("open-analises");
@@ -12,96 +11,73 @@ document.addEventListener("DOMContentLoaded", function () {
     const rotationValue = document.getElementById("rotation-value");
     const legendContainer = document.querySelector(".legend-items");
     const graphGroup = d3.select("svg g");
-
-    // Define largura e altura da tela para posicionamento correto
+  
     const width = window.innerWidth;
     const height = window.innerHeight;
-
-    // Função para esconder o botão do menu
-    function hideMenuButton() {
-        if (menuToggle) menuToggle.style.display = "none";
+  
+    // ✅ CORRIGIDO: evento do botão Ver Análises direto
+    if (openAnalisesBtn && infoPanel) {
+      openAnalisesBtn.addEventListener("click", () => {
+        infoPanel.classList.add("open");
+      });
     }
-
-    // Função para mostrar o botão do menu
-    function showMenuButton() {
-        if (menuToggle) menuToggle.style.display = "block";
-    }
-
-    // Abrir o menu lateral e esconder o botão
-    if (menuToggle) {
-        menuToggle.addEventListener("click", () => {
-            if (openAnalisesBtn && infoPanel) {
-                openAnalisesBtn.addEventListener("click", () => {
-                  infoPanel.classList.add("open");
-                });
-              }
-            });
-            
-
-    // Fechar o menu lateral e voltar para o menu principal
+  
     if (closeBtn) {
-        closeBtn.addEventListener("click", () => {
-            infoPanel.classList.remove("open");
-            resetSections(); // Retorna ao menu principal
-            showMenuButton();
-        });
+      closeBtn.addEventListener("click", () => {
+        infoPanel.classList.remove("open");
+        resetSections();
+        menuToggle.style.display = "block";
+      });
     }
-
-    // Alternar entre as seções e esconder o menu principal
+  
     infoTabs.forEach(tab => {
-        tab.addEventListener("click", () => {
-            infoMenu.style.display = "none"; // Esconde o menu principal
-            infoSections.forEach(section => section.classList.remove("active"));
-            document.getElementById(tab.dataset.tab).classList.add("active"); // Exibe a seção escolhida
-        });
-    });
-
-    // Botão de voltar para o menu principal
-    backButtons.forEach(button => {
-        button.addEventListener("click", () => {
-            resetSections();
-        });
-    });
-
-    // Reseta as seções ao menu principal e faz o botão do menu reaparecer
-    function resetSections() {
-        infoMenu.style.display = "block"; // Mostra o menu principal
+      tab.addEventListener("click", () => {
+        infoMenu.style.display = "none";
         infoSections.forEach(section => section.classList.remove("active"));
-    }
-
-    // Permite voltar ao menu com a tecla "ArrowLeft" (se não estiver alterando rotação)
-    document.addEventListener("keydown", function (event) {
-        if (event.key === "ArrowLeft" && document.activeElement !== rotationSlider) {
-            resetSections();
-        }
+        document.getElementById(tab.dataset.tab).classList.add("active");
+      });
     });
-
-    // Rotation Slider
+  
+    backButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        resetSections();
+      });
+    });
+  
+    function resetSections() {
+      infoMenu.style.display = "block";
+      infoSections.forEach(section => section.classList.remove("active"));
+    }
+  
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "ArrowLeft" && document.activeElement !== rotationSlider) {
+        resetSections();
+      }
+    });
+  
     let currentAngle = 0;
-
-    // Atualiza a rotação do grafo conforme o usuário move o slider
+  
     if (rotationSlider) {
-        rotationSlider.addEventListener("input", function () {
-            let newAngle = parseInt(this.value);
-            currentAngle = newAngle; // Atualiza ângulo globalmente
-            rotationValue.textContent = `${currentAngle}°`;
-            graphGroup.attr("transform", `translate(${width / 2}, ${height / 2}) rotate(${currentAngle})`);
-        });
+      rotationSlider.addEventListener("input", function () {
+        let newAngle = parseInt(this.value);
+        currentAngle = newAngle;
+        rotationValue.textContent = `${currentAngle}°`;
+        graphGroup.attr("transform", `translate(${width / 2}, ${height / 2}) rotate(${currentAngle})`);
+      });
     }
-
-    // Permite continuar girando sem limite ao segurar as setas do teclado
+  
     document.addEventListener("keydown", function (event) {
-        if (event.key === "ArrowLeft" && document.activeElement !== rotationSlider) {
-            currentAngle -= 10;
-        } else if (event.key === "ArrowRight" && document.activeElement !== rotationSlider) {
-            currentAngle += 10;
-        }
-
-        // Atualiza o slider para refletir a mudança
-        if (rotationSlider) {
-            rotationSlider.value = currentAngle;
-            rotationValue.textContent = `${currentAngle}°`;
-            graphGroup.attr("transform", `translate(${width / 2}, ${height / 2}) rotate(${currentAngle})`);
-        }
+      if (event.key === "ArrowLeft" && document.activeElement !== rotationSlider) {
+        currentAngle -= 10;
+      } else if (event.key === "ArrowRight" && document.activeElement !== rotationSlider) {
+        currentAngle += 10;
+      }
+  
+      if (rotationSlider) {
+        rotationSlider.value = currentAngle;
+        rotationValue.textContent = `${currentAngle}°`;
+        graphGroup.attr("transform", `translate(${width / 2}, ${height / 2}) rotate(${currentAngle})`);
+      }
     });
-});
+  });
+  
