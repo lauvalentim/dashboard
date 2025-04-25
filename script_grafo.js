@@ -76,43 +76,49 @@ d3.json("radial.json").then(data => {
         .enter().append("g")
         .attr("transform", d => `rotate(${d.x * 180 / Math.PI - 90}) translate(${d.y},0)`);
         
-    const parentColors = {
-        "Narrativas": "#ccc", // Cinza neutro
-        "Esportes & Games": "#1b5e20", // Verde escuro
-        "Educação & Tecnologia": "#0d47a1", // Azul escuro
-        "Notícias & Sociedade": "#b71c1c", // Vermelho escuro
-        "Música": "#e65100", // Laranja escuro  
-        "Entretenimento": "#ffd321", // Amarelo escuro
-        "Outros": " #b81469" // Rosa escuro
-    };
+        const parentColors = {
+            "Narrativas": "#ccc",
+            "Racismo ambiental": "rgb(9, 128, 17)",
+            "Racismo ambiental e Enchente do Rio Grande do Sul": " #0d47a1",
+            "Enchente - Rio Grande do Sul": "rgb(145, 12, 96)",
+            "Imprensa e redes sociais": " #b71c1c",
+            "Rio de Janeiro": "rgb(249, 179, 15)",
+            "Ajuda durante a enchente, ou desvio de ajuda": "rgb(89, 13, 196)",
+          };
 
-    function adjustColor(color, depth) {
-        if (!color) return "#ccc"; // Se a cor for inválida, usa um cinza neutro
-        return d3.color(color).brighter(depth * 0.4).formatRgb(); // Clareia a cor dos filhos
-    }
+          function adjustColor(color, depth) {
+            const c = d3.color(color);
+            return c ? c.brighter(depth * 0.4).formatRgb() : "#ccc";
+          }          
+
+          const clusterLabels = {
+            "Racismo ambiental e Enchente do Rio Grande do Sul": "Racismo Ambiental + Enchentes",
+            "Enchente - Rio Grande do Sul": "Enchente - RS",
+            "Ajuda durante a enchente, ou desvio de ajuda": "Ajuda"
+          };
+          
 
     node.append("circle")
         .attr("r", d => d.children ? 6 : 4) // Diferencia tamanho de pais e filhos
         .attr("fill", d => {
-            if (d.data.id === "Narrativas") {
-                return "#ccc"; // O nó "Narrativas" terá um cinza neutro
-            } else if (!d.parent || d.parent.data.id === "Narrativas") {   
-                return parentColors[d.data.id] || "#ccc"; // Define cor para os filhos diretos de "Narrativas"
-            } else {
-                let rootAncestor = d.ancestors().find(a => a.parent && a.parent.data.id === "Narrativas"); // Pega o primeiro nível abaixo de "Narrativas"
-                let rootColor = rootAncestor ? parentColors[rootAncestor.data.id] : null;
-                return adjustColor(rootColor, d.depth); // Aplica a tonalidade ajustada
-            }
-        });
+            if (d.data.id === "Narrativas") return parentColors["Narrativas"] || "#ccc";
+          
+            const cluster = d.ancestors().find(a => a.parent && a.parent.data.id === "Narrativas");
+            const baseColor = cluster ? parentColors[cluster.data.id] : "#999";
+          
+            return (d.parent && d.parent.data.id === "Narrativas")
+              ? baseColor
+              : adjustColor(baseColor, d.depth);
+          });          
 
-    node.append("text")
-        .attr("dy", "0.31em")
-        .attr("x", d => d.x < Math.PI ? 6 : -6)
-        .attr("text-anchor", d => d.x < Math.PI ? "start" : "end")
-        .attr("transform", d => `rotate(${d.x >= Math.PI ? 180 : 0})`)
-        .text(d => d.data.id)
-        .style("font-size", "7.5px")
-        .style("fill", "#333");
+          node.append("text")
+          .attr("dy", "0.31em")
+          .attr("x", d => d.x < Math.PI ? 6 : -6)
+          .attr("text-anchor", d => d.x < Math.PI ? "start" : "end")
+          .attr("transform", d => `rotate(${d.x >= Math.PI ? 180 : 0})`)
+          .text(d => clusterLabels[d.data.id] || d.data.id)
+          .style("font-size", "9px")
+          .style("fill", "#333");        
 
     // Adiciona Tooltip
     const tooltip = d3.select("body")
@@ -139,24 +145,30 @@ d3.json("radial.json").then(data => {
                 (relatedNodes.has(link.source) && relatedNodes.has(link.target)) ? 1 : 0.2);
     });
 
-    let currentTransform = d3.zoomIdentity.translate(width / 2, height / 2).scale(1);
-    svg.call(zoom).call(zoom.transform, currentTransform);
+        // Adiciona zoom  
+        const zoom = d3.zoom()
+        .scaleExtent([0.5, 5])
+        .on("zoom", (event) => {
+            graphGroup.attr("transform", event.transform);    
+        });
 
+        let currentTransform = d3.zoomIdentity.translate(width / 2, height / 2).scale(1);   
+        svg.call(zoom).call(zoom.transform, currentTransform);
 
-    document.getElementById("zoom-in").addEventListener("click", () => {
-        currentTransform = currentTransform.scale(1.2);
-        svg.transition().duration(300).call(zoom.transform, currentTransform);
-    });
+        document.getElementById("zoom-in").addEventListener("click", () => {
+            currentTransform = currentTransform.scale(1.2);
+            svg.transition().duration(300).call(zoom.transform, currentTransform);   
+        });
 
-    document.getElementById("zoom-out").addEventListener("click", () => {
-        currentTransform = currentTransform.scale(0.8);
-        svg.transition().duration(300).call(zoom.transform, currentTransform);
-    });
+        document.getElementById("zoom-out").addEventListener("click", () => {
+            currentTransform = currentTransform.scale(0.8);
+            svg.transition().duration(300).call(zoom.transform, currentTransform);
+           });
 
-    document.getElementById("zoom-reset").addEventListener("click", () => {
-        currentTransform = d3.zoomIdentity.translate(width / 2, height / 2).scale(1);
-        svg.transition().duration(300).call(zoom.transform, currentTransform);
-    });
+        document.getElementById("zoom-reset").addEventListener("click", () => {
+            currentTransform = d3.zoomIdentity.translate(width / 2, height / 2).scale(1);
+            svg.transition().duration(300).call(zoom.transform, currentTransform);
+        });
 
     // Evento para restaurar tudo ao estado original ao clicar fora do grafo
     d3.select("body").on("click", function () {
@@ -175,16 +187,7 @@ d3.json("radial.json").then(data => {
     .on("mouseout", function () {
         tooltip.style("visibility", "hidden");
     });
-    
-    // Adiciona zoom e pan
-    const zoom = d3.zoom()
-    .scaleExtent([0.5, 5])
-    .on("zoom", (event) => {
-      graphGroup.attr("transform", event.transform);
-    });  
-  
-    svg.call(zoom);
-
+      
     // Ajusta o comportamento do zoom para centralizar no cursor
     d3.select("svg").on("dblclick.zoom", function (event) {
         const [mouseX, mouseY] = d3.pointer(event);
@@ -237,7 +240,7 @@ d3.json("radial.json").then(data => {
         colorBox.style.backgroundColor = parentColors[cluster] || "#ccc"; // Cor padrão se não houver
 
         const textLabel = document.createElement("span");
-        textLabel.textContent = cluster;
+        textLabel.textContent = clusterLabels[cluster] || cluster;
 
         legendItem.appendChild(colorBox);
         legendItem.appendChild(textLabel);
