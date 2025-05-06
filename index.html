@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DataViz RGDS</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -25,44 +26,44 @@
 
       <div id="info-menu">
         <h2>Menu de Informações</h2>
-        <button class="info-tab" data-tab="general">🟡 Análise Geral</button>
-        <button class="info-tab" data-tab="context">🟢 Base de Dados</button>
-        <button class="info-tab" data-tab="graph">🔵 Organização do Grafo</button>
-        <button class="info-tab" data-tab="tools">🔴 Ferramentas Utilizadas</button>
+        <button class="info-tab" data-tab="general">Análise Geral</button>
+        <button class="info-tab" data-tab="context">Base de Dados</button>
+        <button class="info-tab" data-tab="graph">Organização do Grafo</button>
+        <button class="info-tab" data-tab="tools">Ferramentas Utilizadas</button>
       </div>
 
       <div id="info-content">
         <div class="info-section" id="general">
-            <button class="back-to-menu">🡄</button>
-            <div class="info-wrapper">
-              <h3>🟡 Análise Geral</h3>
-              <p>...</p>
-            </div>
-          </div>                 
-        
+          <button class="back-to-menu">🡄</button>
+          <div class="info-wrapper">
+            <h3>🟡 Análise Geral</h3>
+            <p>...</p>
+          </div>
+        </div>
+
         <div class="info-section" id="context">
-            <button class="back-to-menu">🡄</button>
-            <div class="info-wrapper">
-              <h3>🟢 Base de Dados</h3>
-              <p>Seu conteúdo aqui...</p>
-            </div>
-          </div>          
+          <button class="back-to-menu">🡄</button>
+          <div class="info-wrapper">
+            <h3>🟢 Base de Dados</h3>
+            <p>Seu conteúdo aqui...</p>
+          </div>
+        </div>
 
         <div class="info-section" id="graph">
-            <button class="back-to-menu">🡄</button>
-            <div class="info-wrapper">
-              <h3>🔵 Organização do Grafo</h3>
-              <p>Seu conteúdo aqui...</p>
-            </div>
-          </div>          
+          <button class="back-to-menu">🡄</button>
+          <div class="info-wrapper">
+            <h3>🔵 Organização do Grafo</h3>
+            <p>Seu conteúdo aqui...</p>
+          </div>
+        </div>
 
         <div class="info-section" id="tools">
-            <button class="back-to-menu">🡄</button>
-            <div class="info-wrapper">
-              <h3>🔴 Ferramentas Utilizadas</h3>
-              <p>Seu conteúdo aqui...</p>
-            </div>
-          </div>          
+          <button class="back-to-menu">🡄</button>
+          <div class="info-wrapper">
+            <h3>🔴 Ferramentas Utilizadas</h3>
+            <p>Seu conteúdo aqui...</p>
+          </div>
+        </div>
       </div>
 
     </div>
@@ -70,103 +71,119 @@
 
   <!-- GRAFO SECTION -->
   <section id="grafo-section">
+    <div id="overlay-grafo">
+      <button id="btn-ver-grafo">explore🌐</button>
+    </div>
+
     <div id="grafo-container">
-    <div id="zoom-controls">
+      <div id="zoom-controls">
         <button id="zoom-in">＋</button>
         <button id="zoom-out">－</button>
         <button id="zoom-reset">⭯</button>
-    </div>      
-
-    <div class="legend-container">
-      <div class="legend-title">📌 Legenda</div>
-      <div class="legend-items"></div>
-    </div>
-
-    <div class="rotation-control">
-      <label for="rotation-slider">Rotação:</label>
-      <input type="range" id="rotation-slider" min="0" max="360" value="0" step="1">
-      <span id="rotation-value">0°</span>
-    </div>
-
-    <div id="mini-menu">
-      <button class="mini-tab" data-action="explore">🔍 Explorar Cluster</button>
-    </div>
-
-   <!-- Painel Explorar Cluster -->
-   <div id="explorar-cluster-panel">
-    <button id="close-explorar" class="close-btn">✖</button>
-    <h2>🔍 Explorar Cluster</h2>
-
-      <!-- Dropdown para selecionar cluster -->
-      <select id="cluster-select">
-        <option value="">Selecione um cluster...</option>
-        <option value="Racismo Ambiental + Enchentes">Racismo Ambiental + Enchentes</option>
-        <option value="Imprensa e redes sociais">Imprensa e redes sociais</option>
-        <option value="Enchente - RS">Enchente - RS</option>
-        <option value="Racismo ambiental">Racismo ambiental</option>
-        <option value="Ajuda">Ajuda</option>
-        <option value="Rio de Janeiro">Rio de Janeiro</option>
-      </select>
-
-      <!-- Informações rápidas do cluster -->
-      <div id="cluster-info" class="cluster-info">
-        <h4>📊 Informações Rápidas</h4>
-        <p>Total de Posts: -</p>
-        <p>Total de Autores: -</p>
-        <p>Likes Médios: -</p>
-        <p>Comentários Médios: -</p>
-        <p>Engajamento Médio: -</p>
-        <p>Top Autor: -</p>
       </div>
 
-      <!-- Posts relevantes do cluster -->
-      <div id="cluster-posts" class="cluster-posts">
-        <h4>📌 Posts do Cluster</h4>
-        <p>Selecione um cluster para visualizar os posts...</p>
+      <div class="legend-container">
+        <div class="legend-title">📌 Legenda</div>
+        <div class="legend-items"></div>
       </div>
-    </div>
-  </div> 
-</section>
 
-  <!-- TIMELINE SECTION -->
-  <section id="timeline-section">
-    <div class="timeline-content">
-      <h2>📆 Linha do Tempo (em construção)</h2>
-      <p>Essa seção será dedicada à visualização temporal dos dados, permitindo uma análise cronológica das publicações.</p>
+      <div class="rotation-control">
+        <label for="rotation-slider">Rotação:</label>
+        <input type="range" id="rotation-slider" min="0" max="360" value="0" step="1">
+        <span id="rotation-value">0°</span>
+      </div>
+
+      <div id="mini-menu">
+        <button class="mini-tab" data-action="explore">🔍 Explorar Cluster</button>
+      </div>
+
+      <!-- Painel Explorar Cluster -->
+      <div id="explorar-cluster-panel">
+        <button id="close-explorar" class="close-btn">✖</button>
+        <h2>🔍 Explorar Cluster</h2>
+
+        <!-- Dropdown para selecionar cluster -->
+        <select id="cluster-select">
+          <option value="">Selecione um cluster...</option>
+        </select>
+
+        <!-- Informações rápidas do cluster -->
+        <div id="cluster-info" class="cluster-info">
+          <h4>📈 Dados Gerais do Cluster</h4>
+          <p>Total Coletado: -</p>
+          <p>Total de Autores: -</p>
+          <p>Likes Médios: -</p>
+          <p>Comentários Médios: -</p>
+          <p>Engajamento Médio: -</p>
+          <p>Top Autor: -</p>
+        </div>
+
+        <!-- Posts relevantes do cluster -->
+        <div id="cluster-posts" class="cluster-posts">
+          <h4>📌 Posts do Cluster</h4>
+          <p>Selecione um cluster para visualizar os posts...</p>
+        </div>
+
+        <div class="post-card">
+          <p class="author">@usuario</p>
+          <p class="post-text">"Mensagem do post..."</p>
+          <div class="post-meta">❤️ likes 💬 comentários 🔁 engajamento</div>
+          <a class="post-link" href="..." target="_blank">🔗 Ver no Instagram</a>
+        </div>
+
+      </div>
+
+      <div id="post-popup" class="popup hidden">
+        <div class="popup-content">
+          <span id="popup-close" class="popup-close">✖</span>
+          <h3 id="popup-author">@autor</h3>
+          <p id="popup-message">Texto completo do post...</p>
+          <div id="popup-meta">❤️ 0 💬 0 🔁 0</div>
+          <a id="popup-link" href="#" target="_blank">🔗 Ver no Instagram</a>
+        </div>
+      </div>
+
     </div>
   </section>
 
-<!-- Scripts -->
-<script src="https://d3js.org/d3.v7.min.js"></script>
-<script src="script_grafo.js"></script>
-<script src="interface.js"></script>
+  <!-- CHORD DIAGRAM SECTION -->
+  <section id="section3">
+    <div id="chord-panel">
+      <h2>Filtros</h2>
+      <label for="clusterSelect">Cluster:</label>
+      <select id="clusterSelect">
+        <option value="Todos">Todos</option>
+        <option value="C1">C1</option>
+        <option value="C2">C2</option>
+        <option value="C3">C3</option>
+        <option value="C4">C4</option>
+        <option value="C5">C5</option>
+        <option value="C6">C6</option>
+      </select>
 
+      <label for="minEngajamento">Engajamento Mínimo:</label>
+      <input type="range" id="minEngajamento" min="1" max="10" value="1">
+      <span id="engajamentoValue">1</span>
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const grafoContainer = document.getElementById('grafo-container');
-  const section2 = document.getElementById('grafo-section');
-  let graphCreated = false;
+      <button onclick="filtrarDados()">Aplicar Filtros</button>
+    </div>
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        if (!graphCreated) {
-          drawGraph();
-          graphCreated = true;
-        }
-        grafoContainer.style.display = 'block';
-      } else {
-        grafoContainer.innerHTML = ""; // limpa o SVG
-        graphCreated = false;
-        grafoContainer.style.display = 'none';
-      }
-    });
-  }, { threshold: 0.5 });
+    <div id="chord-diagram"></div>
+  </section>
 
-  observer.observe(section2);
-});
-</script>
+  <!-- Scripts -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://unpkg.com/circos@latest/dist/circos.min.js"></script>
+  <script src="script_grafo.js"></script>
+
+  <script src="https://unpkg.com/circos@latest/dist/circos.min.js"></script>
+  <script type="module">
+    import { drawCircosDiagram } from './script_chord.js';
+    drawCircosDiagram('#chord-diagram');
+  </script>
+
+  <script src="interface.js"></script>
 
 </body>
+
 </html>

@@ -8,32 +8,440 @@
           "parent": ""
         },
         {
-          "id": "Ajuda durante a enchente, ou desvio de ajuda",
+          "id": "Ajuda",
           "parent": "Narrativas"
         },
         {
-          "id": "Enchente - Rio Grande do Sul",
+          "id": "Enchente RS",
           "parent": "Narrativas"
         },
         {
-          "id": "Imprensa e redes sociais",
+          "id": "Imprensa",
           "parent": "Narrativas"
         },
         {
-          "id": "Racismo ambiental",
+          "id": "Racismo",
           "parent": "Narrativas"
         },
         {
-          "id": "Racismo ambiental e Enchente do Rio Grande do Sul",
+          "id": "Racismo + Enchentes",
           "parent": "Narrativas"
         },
         {
-          "id": "Rio de Janeiro",
+          "id": "RJ",
           "parent": "Narrativas"
         },
         {
           "id": "midianinja",
-          "parent": "Ajuda durante a enchente, ou desvio de ajuda",
+          "parent": "Ajuda"
+        },
+        {
+          "id": "orlandomorando",
+          "parent": "Ajuda"
+        },
+        {
+          "id": "maisgoias",
+          "parent": "Ajuda"
+        },
+        {
+          "id": "guiacapixaba",
+          "parent": "Ajuda"
+        },
+        {
+          "id": "prefsbc",
+          "parent": "Ajuda"
+        },
+        {
+          "id": "gforce.garage",
+          "parent": "Ajuda"
+        },
+        {
+          "id": "leonelradde",
+          "parent": "Ajuda"
+        },
+        {
+          "id": "reginetebispo",
+          "parent": "Ajuda"
+        },
+        {
+          "id": "ivanvalentepsol",
+          "parent": "Ajuda"
+        },
+        {
+          "id": "horabrasilia",
+          "parent": "Ajuda"
+        },
+        {
+          "id": "ibamagov",
+          "parent": "Ajuda"
+        },
+        {
+          "id": "gleisihoffmann",
+          "parent": "Ajuda"
+        },
+        {
+          "id": "clima.info",
+          "parent": "Ajuda"
+        },
+        {
+          "id": "miguelsrossetto",
+          "parent": "Ajuda"
+        },
+        {
+          "id": "ibsustentabilidade",
+          "parent": "Enchente RS"
+        },
+        {
+          "id": "palmeiras",
+          "parent": "Enchente RS"
+        },
+        {
+          "id": "operitoambiental",
+          "parent": "Enchente RS"
+        },
+        {
+          "id": "revolucaopreta_",
+          "parent": "Enchente RS"
+        },
+        {
+          "id": "povos.tradicionais",
+          "parent": "Enchente RS"
+        },
+        {
+          "id": "isadoranaoentendenada",
+          "parent": "Enchente RS"
+        },
+        {
+          "id": "subcelebrities",
+          "parent": "Enchente RS"
+        },
+        {
+          "id": "gossipdodia",
+          "parent": "Enchente RS"
+        },
+        {
+          "id": "greenpeacebrasil",
+          "parent": "Enchente RS"
+        },
+        {
+          "id": "matheuspggomes",
+          "parent": "Enchente RS"
+        },
+        {
+          "id": "amparasilvestre",
+          "parent": "Enchente RS"
+        },
+        {
+          "id": "cnnbrasil",
+          "parent": "Enchente RS"
+        },
+        {
+          "id": "marco.antonio.costa",
+          "parent": "Enchente RS"
+        },
+        {
+          "id": "opeehenriqe",
+          "parent": "Enchente RS"
+        },
+        {
+          "id": "leosakamoto",
+          "parent": "Enchente RS"
+        },
+        {
+          "id": "eupresley",
+          "parent": "Enchente RS"
+        },
+        {
+          "id": "globonews",
+          "parent": "Enchente RS"
+        },
+        {
+          "id": "claudiabartelle",
+          "parent": "Enchente RS"
+        },
+        {
+          "id": "brasildefato",
+          "parent": "Enchente RS"
+        },
+        {
+          "id": "ecobarreiradiegosaldanha",
+          "parent": "Enchente RS"
+        },
+        {
+          "id": "quem",
+          "parent": "Enchente RS"
+        },
+        {
+          "id": "carpinejar",
+          "parent": "Enchente RS"
+        },
+        {
+          "id": "oproprioteatualizeinews",
+          "parent": "Enchente RS"
+        },
+        {
+          "id": "mdb_nacional",
+          "parent": "Enchente RS"
+        },
+        {
+          "id": "soberana.tv",
+          "parent": "Enchente RS"
+        },
+        {
+          "id": "btmaisoficial",
+          "parent": "Enchente RS"
+        },
+        {
+          "id": "opovoonline",
+          "parent": "Enchente RS"
+        },
+        {
+          "id": "billieeilishbr",
+          "parent": "Enchente RS"
+        },
+        {
+          "id": "itajaiemfoco",
+          "parent": "Enchente RS"
+        },
+        {
+          "id": "movimento_democracia",
+          "parent": "Enchente RS"
+        },
+        {
+          "id": "rodaviva_tvcultura",
+          "parent": "Enchente RS"
+        },
+        {
+          "id": "camilajarams",
+          "parent": "Enchente RS"
+        },
+        {
+          "id": "_mariadorosario",
+          "parent": "Enchente RS"
+        },
+        {
+          "id": "paulafeijo",
+          "parent": "Enchente RS"
+        },
+        {
+          "id": "pauloteixeira13",
+          "parent": "Enchente RS"
+        },
+        {
+          "id": "hilde_angel",
+          "parent": "Enchente RS"
+        },
+        {
+          "id": "igarassugeral2024",
+          "parent": "Enchente RS"
+        },
+        {
+          "id": "chico.alencar",
+          "parent": "Enchente RS"
+        },
+        {
+          "id": "sumaumajornalismo",
+          "parent": "Enchente RS"
+        },
+        {
+          "id": "agenciapublica",
+          "parent": "Enchente RS"
+        },
+        {
+          "id": "igrejadospobres",
+          "parent": "Enchente RS"
+        },
+        {
+          "id": "maxmacieldf",
+          "parent": "Enchente RS"
+        },
+        {
+          "id": "pmesp",
+          "parent": "Enchente RS"
+        },
+        {
+          "id": "trlacerda",
+          "parent": "Imprensa"
+        },
+        {
+          "id": "estadao",
+          "parent": "Imprensa"
+        },
+        {
+          "id": "icl.noticias",
+          "parent": "Imprensa"
+        },
+        {
+          "id": "portalr7",
+          "parent": "Imprensa"
+        },
+        {
+          "id": "bbcbrasil",
+          "parent": "Imprensa"
+        },
+        {
+          "id": "uoloficial",
+          "parent": "Imprensa"
+        },
+        {
+          "id": "diariodonordeste",
+          "parent": "Imprensa"
+        },
+        {
+          "id": "otempo",
+          "parent": "Imprensa"
+        },
+        {
+          "id": "forbesbr",
+          "parent": "Imprensa"
+        },
+        {
+          "id": "sulvinteum",
+          "parent": "Imprensa"
+        },
+        {
+          "id": "revistaforum",
+          "parent": "Imprensa"
+        },
+        {
+          "id": "revistaoeste",
+          "parent": "Imprensa"
+        },
+        {
+          "id": "jornaloglobo",
+          "parent": "Imprensa"
+        },
+        {
+          "id": "revistarealce",
+          "parent": "Imprensa"
+        },
+        {
+          "id": "showdavida",
+          "parent": "Imprensa"
+        },
+        {
+          "id": "andanews",
+          "parent": "Imprensa"
+        },
+        {
+          "id": "vejanoinsta",
+          "parent": "Imprensa"
+        },
+        {
+          "id": "jc_pe",
+          "parent": "Imprensa"
+        },
+        {
+          "id": "jrjundiai",
+          "parent": "Imprensa"
+        },
+        {
+          "id": "metropolenews",
+          "parent": "Imprensa"
+        },
+        {
+          "id": "metropoles",
+          "parent": "Imprensa"
+        },
+        {
+          "id": "siteoeco",
+          "parent": "Imprensa"
+        },
+        {
+          "id": "oliberal",
+          "parent": "Imprensa"
+        },
+        {
+          "id": "jornaldarecord",
+          "parent": "Imprensa"
+        },
+        {
+          "id": "escoladeativismo",
+          "parent": "Racismo"
+        },
+        {
+          "id": "zoebmartinez",
+          "parent": "Racismo"
+        },
+        {
+          "id": "gutozacariasmbl",
+          "parent": "Racismo"
+        },
+        {
+          "id": "brunozambelli.sp",
+          "parent": "Racismo"
+        },
+        {
+          "id": "celia.xakriaba",
+          "parent": "Racismo"
+        },
+        {
+          "id": "marquito.sc",
+          "parent": "Racismo"
+        },
+        {
+          "id": "helio_beltrao",
+          "parent": "Racismo"
+        },
+        {
+          "id": "chrisgonzatti",
+          "parent": "Racismo"
+        },
+        {
+          "id": "cidadeoperariaoficial",
+          "parent": "Racismo"
+        },
+        {
+          "id": "opiauiense",
+          "parent": "Racismo"
+        },
+        {
+          "id": "conectas",
+          "parent": "Racismo"
+        },
+        {
+          "id": "dceufrj",
+          "parent": "Racismo"
+        },
+        {
+          "id": "brunacrioula",
+          "parent": "Racismo + Enchentes"
+        },
+        {
+          "id": "sitemundonegro",
+          "parent": "Racismo + Enchentes"
+        },
+        {
+          "id": "lucianagenro",
+          "parent": "Racismo + Enchentes"
+        },
+        {
+          "id": "midiaindigenaoficial",
+          "parent": "Racismo + Enchentes"
+        },
+        {
+          "id": "mauriciodovolei",
+          "parent": "RJ"
+        },
+        {
+          "id": "alexandre_garcia1.0",
+          "parent": "RJ"
+        },
+        {
+          "id": "aniellefranco",
+          "parent": "RJ"
+        },
+        {
+          "id": "canal_patriota",
+          "parent": "RJ"
+        },
+        {
+          "id": "universocurioso",
+          "parent": "RJ"
+        },
+        {
+          "id": "O governo do Rio Grande do Sul  liderado por Eduardo Leite (",
+          "parent": "midianinja",
           "likes": 53990,
           "comments": 1358,
           "engajamento": 55348,
@@ -41,8 +449,8 @@
           "url": "https://www.instagram.com/midianinja/p/C7Wm_fptyMn/"
         },
         {
-          "id": "orlandomorando",
-          "parent": "Ajuda durante a enchente, ou desvio de ajuda",
+          "id": "⛑️🤝 SBC SOLIDÁRIA: INICIADA A MISSÃO DE APOIO AO RIO GRANDE ",
+          "parent": "orlandomorando",
           "likes": 11356,
           "comments": 1164,
           "engajamento": 12520,
@@ -50,8 +458,8 @@
           "url": "https://www.instagram.com/reel/C6ot8O3udLT/"
         },
         {
-          "id": "maisgoias",
-          "parent": "Ajuda durante a enchente, ou desvio de ajuda",
+          "id": "O governador Ronaldo Caiado (União Brasil) determinou o envi",
+          "parent": "maisgoias",
           "likes": 11949,
           "comments": 248,
           "engajamento": 12197,
@@ -59,8 +467,8 @@
           "url": "https://www.instagram.com/p/DIG34urului/"
         },
         {
-          "id": "guiacapixaba",
-          "parent": "Ajuda durante a enchente, ou desvio de ajuda",
+          "id": "Se souber de mais lugares que estão arrecadando ajuda para a",
+          "parent": "guiacapixaba",
           "likes": 6916,
           "comments": 241,
           "engajamento": 7157,
@@ -68,8 +476,8 @@
           "url": "https://www.instagram.com/guiacapixaba"
         },
         {
-          "id": "prefsbc",
-          "parent": "Ajuda durante a enchente, ou desvio de ajuda",
+          "id": "🚨 MISSÃO DE SOLIDARIEDADE PELO RIO GRANDE DO SUL!  Enviamos ",
+          "parent": "prefsbc",
           "likes": 5457,
           "comments": 217,
           "engajamento": 5674,
@@ -77,8 +485,8 @@
           "url": "https://www.instagram.com/prefsbc"
         },
         {
-          "id": "gforce.garage",
-          "parent": "Ajuda durante a enchente, ou desvio de ajuda",
+          "id": "🚨RS: Caminhoneiros com milhares de insumos e doações denunci",
+          "parent": "gforce.garage",
           "likes": 5111,
           "comments": 446,
           "engajamento": 5557,
@@ -86,8 +494,8 @@
           "url": "https://www.instagram.com/gforce.garage"
         },
         {
-          "id": "leonelradde",
-          "parent": "Ajuda durante a enchente, ou desvio de ajuda",
+          "id": "'O GOVERNO TEM OUTRAS AGENDAS!'  O governador do Rio Grande ",
+          "parent": "leonelradde",
           "likes": 4708,
           "comments": 390,
           "engajamento": 5098,
@@ -95,8 +503,8 @@
           "url": "https://www.instagram.com/leonelradde/p/C7T9BC0ut5V/"
         },
         {
-          "id": "reginetebispo",
-          "parent": "Ajuda durante a enchente, ou desvio de ajuda",
+          "id": "🚨Diante da tragédia que assola nossa região  vemos a importâ",
+          "parent": "reginetebispo",
           "likes": 4866,
           "comments": 146,
           "engajamento": 5012,
@@ -104,8 +512,8 @@
           "url": "https://www.instagram.com/reginetebispo"
         },
         {
-          "id": "ivanvalentepsol",
-          "parent": "Ajuda durante a enchente, ou desvio de ajuda",
+          "id": "Eduardo Leite e a assembleia estadual do RS alteraram quase ",
+          "parent": "ivanvalentepsol",
           "likes": 3523,
           "comments": 247,
           "engajamento": 3770,
@@ -113,8 +521,8 @@
           "url": "https://www.instagram.com/ivanvalentepsol/p/C7UPFokhqIz/"
         },
         {
-          "id": "horabrasilia",
-          "parent": "Ajuda durante a enchente, ou desvio de ajuda",
+          "id": "Via <redacted_mention>   Em meio à calamidade no Rio Grande ",
+          "parent": "horabrasilia",
           "likes": 3089,
           "comments": 96,
           "engajamento": 3185,
@@ -122,8 +530,8 @@
           "url": "https://www.instagram.com/horabrasilia"
         },
         {
-          "id": "ibamagov",
-          "parent": "Ajuda durante a enchente, ou desvio de ajuda",
+          "id": "O Ibama se solidariza com as vítimas dos temporais que ating",
+          "parent": "ibamagov",
           "likes": 3067,
           "comments": 52,
           "engajamento": 3119,
@@ -131,8 +539,8 @@
           "url": "https://www.instagram.com/ibamagov"
         },
         {
-          "id": "gleisihoffmann",
-          "parent": "Ajuda durante a enchente, ou desvio de ajuda",
+          "id": "Aécio Neves segue tentando explorar politicamente a tragédia",
+          "parent": "gleisihoffmann",
           "likes": 2684,
           "comments": 294,
           "engajamento": 2978,
@@ -140,8 +548,8 @@
           "url": "https://www.instagram.com/gleisihoffmann/p/C7SFHjwNW7q/"
         },
         {
-          "id": "clima.info",
-          "parent": "Ajuda durante a enchente, ou desvio de ajuda",
+          "id": "🚨 QUEREM APROVAR UMA LEI QUE VAI AGRAVAR DESASTRES COMO O DO",
+          "parent": "clima.info",
           "likes": 2430,
           "comments": 86,
           "engajamento": 2516,
@@ -149,8 +557,8 @@
           "url": "https://www.instagram.com/socioambiental/p/C7UK71OsbLs/"
         },
         {
-          "id": "miguelsrossetto",
-          "parent": "Ajuda durante a enchente, ou desvio de ajuda",
+          "id": "É impressionante a cobrança seletiva sobre a reconstrução do",
+          "parent": "miguelsrossetto",
           "likes": 1825,
           "comments": 201,
           "engajamento": 2026,
@@ -158,8 +566,8 @@
           "url": "https://www.instagram.com/miguelsrossetto"
         },
         {
-          "id": "ibsustentabilidade",
-          "parent": "Enchente - Rio Grande do Sul",
+          "id": "Exército Brasileiro atuando no resgate e salvamento de pesso",
+          "parent": "ibsustentabilidade",
           "likes": 116746,
           "comments": 2235,
           "engajamento": 118981,
@@ -167,8 +575,8 @@
           "url": "https://www.instagram.com/bombeiroscivisbrasileiros/reel/C6mWLIiPnJc/"
         },
         {
-          "id": "palmeiras",
-          "parent": "Enchente - Rio Grande do Sul",
+          "id": "Transformando a lealdade em padrão! 💚  O governo do Rio Gran",
+          "parent": "palmeiras",
           "likes": 76543,
           "comments": 517,
           "engajamento": 77060,
@@ -176,8 +584,8 @@
           "url": "https://www.instagram.com/palmeiras"
         },
         {
-          "id": "operitoambiental",
-          "parent": "Enchente - Rio Grande do Sul",
+          "id": "Estamos vivenciando uma catástrofe climática  ambiental e hu",
+          "parent": "operitoambiental",
           "likes": 53703,
           "comments": 786,
           "engajamento": 54489,
@@ -185,8 +593,8 @@
           "url": "https://www.instagram.com/operitoambiental"
         },
         {
-          "id": "revolucaopreta_",
-          "parent": "Enchente - Rio Grande do Sul",
+          "id": "Enchentes no Rio Grande do Sul: Uma Reflexão sobre o Capital",
+          "parent": "revolucaopreta_",
           "likes": 53042,
           "comments": 1205,
           "engajamento": 54247,
@@ -194,8 +602,8 @@
           "url": "https://www.instagram.com/institutoipe/p/C72L2Mxh8uB/"
         },
         {
-          "id": "povos.tradicionais",
-          "parent": "Enchente - Rio Grande do Sul",
+          "id": "90 pessoas mortas. 132 pessoas desaparecidas. 361 pessoas fe",
+          "parent": "povos.tradicionais",
           "likes": 52659,
           "comments": 622,
           "engajamento": 53281,
@@ -203,8 +611,8 @@
           "url": "https://www.instagram.com/escoladeativismo/p/C6q42-UMnDj/"
         },
         {
-          "id": "isadoranaoentendenada",
-          "parent": "Enchente - Rio Grande do Sul",
+          "id": "Mais claro que nunca  TODO PODER É NOSSO. O rio grande do su",
+          "parent": "isadoranaoentendenada",
           "likes": 52070,
           "comments": 511,
           "engajamento": 52581,
@@ -212,8 +620,8 @@
           "url": "https://www.instagram.com/isadoranaoentendenada"
         },
         {
-          "id": "subcelebrities",
-          "parent": "Enchente - Rio Grande do Sul",
+          "id": "O RS PRECISA DE AJUDA ‼️🚨 O Rio Grande do Sul chega a este d",
+          "parent": "subcelebrities",
           "likes": 38181,
           "comments": 393,
           "engajamento": 38574,
@@ -221,8 +629,8 @@
           "url": "https://www.instagram.com/subcelebrities/p/C6l2I7ZuGwB/"
         },
         {
-          "id": "subcelebrities",
-          "parent": "Enchente - Rio Grande do Sul",
+          "id": "A <redacted_mention> anunciou nos stories que está disponibi",
+          "parent": "subcelebrities",
           "likes": 34195,
           "comments": 1203,
           "engajamento": 35398,
@@ -230,8 +638,8 @@
           "url": "https://www.instagram.com/subcelebrities"
         },
         {
-          "id": "gossipdodia",
-          "parent": "Enchente - Rio Grande do Sul",
+          "id": "O Rio Grande do Sul chega a este domingo (05) com 55 m*rtes ",
+          "parent": "gossipdodia",
           "likes": 28514,
           "comments": 792,
           "engajamento": 29306,
@@ -239,8 +647,8 @@
           "url": "https://www.instagram.com/gossipdodia"
         },
         {
-          "id": "greenpeacebrasil",
-          "parent": "Enchente - Rio Grande do Sul",
+          "id": "Quem são os responsáveis pelo desmonte ambiental que reforça",
+          "parent": "greenpeacebrasil",
           "likes": 24994,
           "comments": 1067,
           "engajamento": 26061,
@@ -248,8 +656,8 @@
           "url": "https://www.instagram.com/greenpeacebrasil"
         },
         {
-          "id": "matheuspggomes",
-          "parent": "Enchente - Rio Grande do Sul",
+          "id": "Nessa tarde  famílias que perderam suas casas nas enchentes ",
+          "parent": "matheuspggomes",
           "likes": 23960,
           "comments": 952,
           "engajamento": 24912,
@@ -257,8 +665,8 @@
           "url": "https://www.instagram.com/matheuspggomes"
         },
         {
-          "id": "amparasilvestre",
-          "parent": "Enchente - Rio Grande do Sul",
+          "id": "#RioGrandeDoSul • O maior desastre climático do Rio Grande d",
+          "parent": "amparasilvestre",
           "likes": 20774,
           "comments": 402,
           "engajamento": 21176,
@@ -266,8 +674,8 @@
           "url": "https://www.instagram.com/amparasilvestre/p/C6tdW8AuCgZ/"
         },
         {
-          "id": "cnnbrasil",
-          "parent": "Enchente - Rio Grande do Sul",
+          "id": "ENCHENTES NO RIO GRANDE DO SUL  Atualização feita pelo Googl",
+          "parent": "cnnbrasil",
           "likes": 20442,
           "comments": 144,
           "engajamento": 20586,
@@ -275,8 +683,8 @@
           "url": "https://www.instagram.com/cnnbrasil/p/C778bimRSxB/?locale=it"
         },
         {
-          "id": "marco.antonio.costa",
-          "parent": "Enchente - Rio Grande do Sul",
+          "id": "🇧🇷VEJA: A operação de resgate de um bebê durante a catástrof",
+          "parent": "marco.antonio.costa",
           "likes": 19855,
           "comments": 628,
           "engajamento": 20483,
@@ -284,8 +692,8 @@
           "url": "https://www.instagram.com/marco.antonio.costa/reel/C6i8YZQuY5P/"
         },
         {
-          "id": "opeehenriqe",
-          "parent": "Enchente - Rio Grande do Sul",
+          "id": "🚨 AJUDE O RS 🚨  Os recentes temporais no Rio Grande do Sul c",
+          "parent": "opeehenriqe",
           "likes": 19692,
           "comments": 220,
           "engajamento": 19912,
@@ -293,8 +701,8 @@
           "url": "https://www.instagram.com/gzhdigital/p/Cz2YxlyIzCq/"
         },
         {
-          "id": "leosakamoto",
-          "parent": "Enchente - Rio Grande do Sul",
+          "id": "A reação à tragédia no Rio Grande do Sul não mostra apenas o",
+          "parent": "leosakamoto",
           "likes": 13962,
           "comments": 397,
           "engajamento": 14359,
@@ -302,8 +710,8 @@
           "url": "https://www.instagram.com/leosakamoto"
         },
         {
-          "id": "eupresley",
-          "parent": "Enchente - Rio Grande do Sul",
+          "id": "Eduardo Leite  governador do Rio Grande do Sul  disse que nã",
+          "parent": "eupresley",
           "likes": 13279,
           "comments": 147,
           "engajamento": 13426,
@@ -311,8 +719,8 @@
           "url": "https://www.instagram.com/eupresley"
         },
         {
-          "id": "globonews",
-          "parent": "Enchente - Rio Grande do Sul",
+          "id": "TRAGÉDIA NO RS — O prefeito de Porto Alegre  Sebastião Melo ",
+          "parent": "globonews",
           "likes": 13097,
           "comments": 316,
           "engajamento": 13413,
@@ -320,8 +728,8 @@
           "url": "https://www.instagram.com/globonews/p/C6pEmsfvkIk/"
         },
         {
-          "id": "ibsustentabilidade",
-          "parent": "Enchente - Rio Grande do Sul",
+          "id": "O Rio Taquari passou dos 30 metros e atingiu o maior nível d",
+          "parent": "ibsustentabilidade",
           "likes": 12014,
           "comments": 294,
           "engajamento": 12308,
@@ -329,8 +737,8 @@
           "url": "https://www.instagram.com/ibsustentabilidade/reel/C6e5FPSJg24/"
         },
         {
-          "id": "claudiabartelle",
-          "parent": "Enchente - Rio Grande do Sul",
+          "id": "A água continua a avançar em alguns bairros. Estamos vivendo",
+          "parent": "claudiabartelle",
           "likes": 10388,
           "comments": 481,
           "engajamento": 10869,
@@ -338,8 +746,8 @@
           "url": "https://www.instagram.com/claudiabartelle/reel/C6pUkSevgM2/"
         },
         {
-          "id": "brasildefato",
-          "parent": "Enchente - Rio Grande do Sul",
+          "id": "A conta chega 💲   O governo do Rio Grande do Sul  sob gestão",
+          "parent": "brasildefato",
           "likes": 9378,
           "comments": 348,
           "engajamento": 9726,
@@ -347,8 +755,8 @@
           "url": "https://www.instagram.com/fotografasfotografosdemocracia/p/C7VLwv1Nayw/"
         },
         {
-          "id": "ecobarreiradiegosaldanha",
-          "parent": "Enchente - Rio Grande do Sul",
+          "id": "Convocado pelo <redacted_mention> da <redacted_mention>   es",
+          "parent": "ecobarreiradiegosaldanha",
           "likes": 9023,
           "comments": 540,
           "engajamento": 9563,
@@ -356,8 +764,8 @@
           "url": "https://www.instagram.com/ecobarreiradiegosaldanha"
         },
         {
-          "id": "revolucaopreta_",
-          "parent": "Enchente - Rio Grande do Sul",
+          "id": "No Brasil  tá rolando uma situação bem tensa: enquanto a Mad",
+          "parent": "revolucaopreta_",
           "likes": 8723,
           "comments": 636,
           "engajamento": 9359,
@@ -365,8 +773,8 @@
           "url": "https://www.instagram.com/revolucaopreta_"
         },
         {
-          "id": "quem",
-          "parent": "Enchente - Rio Grande do Sul",
+          "id": "William Bonner embarcou para a cidade de Canoas  no Rio Gran",
+          "parent": "quem",
           "likes": 7076,
           "comments": 1465,
           "engajamento": 8541,
@@ -374,8 +782,8 @@
           "url": "https://www.instagram.com/quem/reel/C6odddPMJuv/"
         },
         {
-          "id": "carpinejar",
-          "parent": "Enchente - Rio Grande do Sul",
+          "id": "UMA FAMÍLIA INTEIRA SEM NADA  Fabrício Carpinejar  O que mui",
+          "parent": "carpinejar",
           "likes": 8118,
           "comments": 303,
           "engajamento": 8421,
@@ -383,8 +791,8 @@
           "url": "https://www.instagram.com/carpinejar"
         },
         {
-          "id": "oproprioteatualizeinews",
-          "parent": "Enchente - Rio Grande do Sul",
+          "id": "Defesa Civil emite alerta de 'inundação extrema' em Porto Al",
+          "parent": "oproprioteatualizeinews",
           "likes": 7497,
           "comments": 108,
           "engajamento": 7605,
@@ -392,8 +800,8 @@
           "url": "https://www.instagram.com/p/DIXN6wjuDpe/"
         },
         {
-          "id": "mdb_nacional",
-          "parent": "Enchente - Rio Grande do Sul",
+          "id": "Ajuda para o Rio Grande do Sul 🤝  O governador <redacted_men",
+          "parent": "mdb_nacional",
           "likes": 7434,
           "comments": 94,
           "engajamento": 7528,
@@ -401,8 +809,8 @@
           "url": "https://www.instagram.com/mdb_nacional"
         },
         {
-          "id": "soberana.tv",
-          "parent": "Enchente - Rio Grande do Sul",
+          "id": "A catástrofe ambiental no Rio Grande do Sul já afetou mais d",
+          "parent": "soberana.tv",
           "likes": 6203,
           "comments": 37,
           "engajamento": 6240,
@@ -410,8 +818,8 @@
           "url": "https://www.instagram.com/soberana.tv/p/C6mTQQQv8uY/"
         },
         {
-          "id": "btmaisoficial",
-          "parent": "Enchente - Rio Grande do Sul",
+          "id": "TRAGÉDIA ANUNCIADA?  O professor  de ecologia e doutor em ci",
+          "parent": "btmaisoficial",
           "likes": 5917,
           "comments": 132,
           "engajamento": 6049,
@@ -419,8 +827,8 @@
           "url": "https://www.instagram.com/btmaisoficial"
         },
         {
-          "id": "opovoonline",
-          "parent": "Enchente - Rio Grande do Sul",
+          "id": "Já são mais de 80 mortos  111 desaparecidos e 276 pessoas fe",
+          "parent": "opovoonline",
           "likes": 5857,
           "comments": 140,
           "engajamento": 5997,
@@ -428,8 +836,8 @@
           "url": "https://www.instagram.com/opovoonline"
         },
         {
-          "id": "billieeilishbr",
-          "parent": "Enchente - Rio Grande do Sul",
+          "id": "Intensificadas pela destruição ambiental  o Rio Grande do Su",
+          "parent": "billieeilishbr",
           "likes": 5551,
           "comments": 65,
           "engajamento": 5616,
@@ -437,17 +845,8 @@
           "url": "https://www.instagram.com/ci_brasil/p/C6xAa3tplUk/"
         },
         {
-          "id": "nan",
-          "parent": "Enchente - Rio Grande do Sul",
-          "likes": 5590,
-          "comments": 0,
-          "engajamento": 5590,
-          "message": "🔴 ENCHENTES NO RS | Em meio à tragédia climática no Rio Grande do Sul — com 2 3 milhões de pessoas afetadas pelas enchentes  segundo a Defesa Civil estadual —  o governador Eduardo Leite (PSDB) desinformou sobre alertas meteorológicos antes do início da crise e sobre a legislação ambiental gaúcha em entrevista ao Roda Viva  da TV Cultura  na segunda-feira (20).  No programa transmitido ao vivo do Theatro São Pedro  um dos edifícios históricos de Porto Alegre  Leite também disse não ter se expressado bem em entrevista à Folha de S.Paulo  no domingo (19)  quando admitiu que estudos anteciparam o risco de inundações  mas que o governo possuía “outras agendas”.  O governador criticou ainda a desinformação sobre a tragédia e “os recortes que se fazem para as redes sociais para se conseguir cliques  curtidas  compartilhamentos”.  Confira um resumo do que checamos:   1️⃣ Não é verdade que cabe apenas aos municípios zelar pelos sistemas de prevenção de desastres. Ainda que as prefeituras sejam responsáveis por atuar em nível local  a lei determina que o estado deve auxiliar no monitoramento e na prevenção de desastres",
-          "url": "https://www.instagram.com/nan"
-        },
-        {
-          "id": "itajaiemfoco",
-          "parent": "Enchente - Rio Grande do Sul",
+          "id": "🙏🏼Força Porto Alegre e Rio Grande do Sul. ⚠️Itajaí sabe o qu",
+          "parent": "itajaiemfoco",
           "likes": 5167,
           "comments": 163,
           "engajamento": 5330,
@@ -455,8 +854,8 @@
           "url": "https://www.instagram.com/itajaiemfoco/reel/C6i_-hYuWd7/"
         },
         {
-          "id": "ibsustentabilidade",
-          "parent": "Enchente - Rio Grande do Sul",
+          "id": "Video por: <redacted_mention> | Porto Alegre neste momento. ",
+          "parent": "ibsustentabilidade",
           "likes": 5085,
           "comments": 205,
           "engajamento": 5290,
@@ -464,8 +863,8 @@
           "url": "https://www.instagram.com/ibsustentabilidade"
         },
         {
-          "id": "leosakamoto",
-          "parent": "Enchente - Rio Grande do Sul",
+          "id": "A tragédia no Rio Grande do Sul  que matou 165 pessoas  gero",
+          "parent": "leosakamoto",
           "likes": 5037,
           "comments": 123,
           "engajamento": 5160,
@@ -473,8 +872,8 @@
           "url": "https://www.instagram.com/p/C7aDw5JvOi-/?hl=en"
         },
         {
-          "id": "movimento_democracia",
-          "parent": "Enchente - Rio Grande do Sul",
+          "id": "Como Eduardo Leite  governador do Rio Grande do Sul  enxerga",
+          "parent": "movimento_democracia",
           "likes": 4212,
           "comments": 550,
           "engajamento": 4762,
@@ -482,8 +881,8 @@
           "url": "https://www.instagram.com/movimento_democracia"
         },
         {
-          "id": "matheuspggomes",
-          "parent": "Enchente - Rio Grande do Sul",
+          "id": "Eduardo Leite foi questionado em rede nacional sobre o nosso",
+          "parent": "matheuspggomes",
           "likes": 4062,
           "comments": 105,
           "engajamento": 4167,
@@ -491,8 +890,8 @@
           "url": "https://www.instagram.com/matheuspggomes"
         },
         {
-          "id": "rodaviva_tvcultura",
-          "parent": "Enchente - Rio Grande do Sul",
+          "id": "'Rio Grande do Sul vai ser um case para o Brasil de reconstr",
+          "parent": "rodaviva_tvcultura",
           "likes": 2661,
           "comments": 1490,
           "engajamento": 4151,
@@ -500,8 +899,8 @@
           "url": "https://www.instagram.com/rodaviva_tvcultura/reel/C7Sd0tYvYps/"
         },
         {
-          "id": "camilajarams",
-          "parent": "Enchente - Rio Grande do Sul",
+          "id": "O RS precisa de nós! ✊🏻  E só um presidente humano entenderi",
+          "parent": "camilajarams",
           "likes": 3792,
           "comments": 161,
           "engajamento": 3953,
@@ -509,8 +908,8 @@
           "url": "https://www.instagram.com/camilajarams"
         },
         {
-          "id": "_mariadorosario",
-          "parent": "Enchente - Rio Grande do Sul",
+          "id": "A população da nossa cidade não pode ficar desprotegida.  Po",
+          "parent": "_mariadorosario",
           "likes": 3635,
           "comments": 295,
           "engajamento": 3930,
@@ -518,8 +917,8 @@
           "url": "https://www.instagram.com/_mariadorosario/reel/C7xOC-fvUgg/"
         },
         {
-          "id": "brasildefato",
-          "parent": "Enchente - Rio Grande do Sul",
+          "id": "Desmontes na legislação ambiental 🧐💧  Conforme as enchentes ",
+          "parent": "brasildefato",
           "likes": 3693,
           "comments": 35,
           "engajamento": 3728,
@@ -527,8 +926,8 @@
           "url": "https://www.instagram.com/brasildefato"
         },
         {
-          "id": "paulafeijo",
-          "parent": "Enchente - Rio Grande do Sul",
+          "id": "“Na bandeira do Rio Grande do Sul  existem três palavrinhas:",
+          "parent": "paulafeijo",
           "likes": 3446,
           "comments": 143,
           "engajamento": 3589,
@@ -536,8 +935,8 @@
           "url": "https://www.instagram.com/paulafeijo/reel/C6pYLDPxi6-/"
         },
         {
-          "id": "pauloteixeira13",
-          "parent": "Enchente - Rio Grande do Sul",
+          "id": "Não havia outra forma de iniciar este seminário sem essa dev",
+          "parent": "pauloteixeira13",
           "likes": 3529,
           "comments": 46,
           "engajamento": 3575,
@@ -545,8 +944,8 @@
           "url": "https://www.instagram.com/pauloteixeira13/reel/C6qyrLVgcVp/"
         },
         {
-          "id": "hilde_angel",
-          "parent": "Enchente - Rio Grande do Sul",
+          "id": "Há cerca de um mês  em 9 de abril passado  a imprensa (G1) d",
+          "parent": "hilde_angel",
           "likes": 3007,
           "comments": 316,
           "engajamento": 3323,
@@ -554,8 +953,8 @@
           "url": "https://www.instagram.com/hilde_angel"
         },
         {
-          "id": "ibsustentabilidade",
-          "parent": "Enchente - Rio Grande do Sul",
+          "id": "A tragédia ambiental e humana que está em curso no Rio Grand",
+          "parent": "ibsustentabilidade",
           "likes": 3072,
           "comments": 98,
           "engajamento": 3170,
@@ -563,8 +962,8 @@
           "url": "https://www.instagram.com/reel/C6hubdpsDBI/?img_index=ibsustentabilidade"
         },
         {
-          "id": "hilde_angel",
-          "parent": "Enchente - Rio Grande do Sul",
+          "id": "Mais imagens desoladoras de Porto Alegre  onde o Rio Guaíba ",
+          "parent": "hilde_angel",
           "likes": 2877,
           "comments": 273,
           "engajamento": 3150,
@@ -572,8 +971,8 @@
           "url": "https://www.instagram.com/hilde_angel"
         },
         {
-          "id": "igarassugeral2024",
-          "parent": "Enchente - Rio Grande do Sul",
+          "id": "ÁUDIO: Filha se despede dos pais antes de ser arrastada por ",
+          "parent": "igarassugeral2024",
           "likes": 2876,
           "comments": 259,
           "engajamento": 3135,
@@ -581,8 +980,8 @@
           "url": "https://www.instagram.com/assunoticia/reel/C6ouxDvuWrS/"
         },
         {
-          "id": "ibsustentabilidade",
-          "parent": "Enchente - Rio Grande do Sul",
+          "id": "Mudanças climáticas já são uma realidade. Pouco a pouco o fe",
+          "parent": "ibsustentabilidade",
           "likes": 2929,
           "comments": 78,
           "engajamento": 3007,
@@ -590,8 +989,8 @@
           "url": "https://www.instagram.com/ibsustentabilidade/reel/C6eTPUHg78p/"
         },
         {
-          "id": "ibamagov",
-          "parent": "Enchente - Rio Grande do Sul",
+          "id": "ENCHENTE RS  O Cetas de Porto Alegre retirou todos os animai",
+          "parent": "ibamagov",
           "likes": 2953,
           "comments": 46,
           "engajamento": 2999,
@@ -599,8 +998,8 @@
           "url": "https://www.instagram.com/ibamagov/p/C6l2cEpujoP/"
         },
         {
-          "id": "chico.alencar",
-          "parent": "Enchente - Rio Grande do Sul",
+          "id": "RIO GRANDE DO SUL INUNDADO: DE DESCASO  DOR E... SOLIDARIEDA",
+          "parent": "chico.alencar",
           "likes": 2898,
           "comments": 64,
           "engajamento": 2962,
@@ -608,8 +1007,8 @@
           "url": "https://www.instagram.com/chico.alencar"
         },
         {
-          "id": "sumaumajornalismo",
-          "parent": "Enchente - Rio Grande do Sul",
+          "id": "O Rio Grande do Sul se tornou o novo epicentro do colapso cl",
+          "parent": "sumaumajornalismo",
           "likes": 2851,
           "comments": 86,
           "engajamento": 2937,
@@ -617,8 +1016,8 @@
           "url": "https://www.instagram.com/sumaumajornalismo/p/C745Z_cgfWo/"
         },
         {
-          "id": "agenciapublica",
-          "parent": "Enchente - Rio Grande do Sul",
+          "id": "🚨 DESASTRE NO RIO GRANDE DO SUL | Um rio  duas margens: Com ",
+          "parent": "agenciapublica",
           "likes": 2824,
           "comments": 30,
           "engajamento": 2854,
@@ -626,8 +1025,8 @@
           "url": "https://www.instagram.com/agenciapublica"
         },
         {
-          "id": "igrejadospobres",
-          "parent": "Enchente - Rio Grande do Sul",
+          "id": "O Código Ambiental do Rio Grande do Sul  que levou nove anos",
+          "parent": "igrejadospobres",
           "likes": 2793,
           "comments": 61,
           "engajamento": 2854,
@@ -635,8 +1034,8 @@
           "url": "https://www.instagram.com/igrejadospobres/p/C6j-tK-Piuu/"
         },
         {
-          "id": "hilde_angel",
-          "parent": "Enchente - Rio Grande do Sul",
+          "id": "Depois do transbordamento do Rio Guaíba sobre a cidade de Po",
+          "parent": "hilde_angel",
           "likes": 2524,
           "comments": 206,
           "engajamento": 2730,
@@ -644,17 +1043,8 @@
           "url": "https://www.instagram.com/hilde_angel"
         },
         {
-          "id": "nan",
-          "parent": "Enchente - Rio Grande do Sul",
-          "likes": 2706,
-          "comments": 0,
-          "engajamento": 2706,
-          "message": "O Rio Grande do Sul pede socorro!  A maior tragédia ambiental da história do estado já chegou a 83 pessoas mortas  111 desaparecidas e 291 feridas  de acordo com os dados da Defesa Civil. Ao todo  364 dos 496 municípios do estado registraram algum tipo de problema  afetando 873 mil pessoas. O rio Guaíba  em Porto Alegre  está quase 2 30 metros acima da cota de inundação. O governo estadual decretou situação de calamidade.   São dezenas de casas e estabelecimentos comerciais completamente destruídos  cidades sem energia elétrica e com pontos de inundação",
-          "url": "https://www.instagram.com/nan"
-        },
-        {
-          "id": "maxmacieldf",
-          "parent": "Enchente - Rio Grande do Sul",
+          "id": "As tragédias provocadas pelos eventos climáticos extremos po",
+          "parent": "maxmacieldf",
           "likes": 2647,
           "comments": 45,
           "engajamento": 2692,
@@ -662,8 +1052,8 @@
           "url": "https://www.instagram.com/maxmacieldf"
         },
         {
-          "id": "pmesp",
-          "parent": "Enchente - Rio Grande do Sul",
+          "id": "Os resgates não pararam no Rio Grande do Sul. Nosso policiam",
+          "parent": "pmesp",
           "likes": 2416,
           "comments": 91,
           "engajamento": 2507,
@@ -671,8 +1061,8 @@
           "url": "https://www.instagram.com/pmesp/reel/C7cfPrmORnV/"
         },
         {
-          "id": "midianinja",
-          "parent": "Imprensa e redes sociais",
+          "id": "Quase 850 mil pessoas (844.673) foram impactadas até o momen",
+          "parent": "midianinja",
           "likes": 77783,
           "comments": 1091,
           "engajamento": 78874,
@@ -680,17 +1070,8 @@
           "url": "https://www.instagram.com/midianinja"
         },
         {
-          "id": "nan",
-          "parent": "Imprensa e redes sociais",
-          "likes": 66156,
-          "comments": 0,
-          "engajamento": 66156,
-          "message": "O governador do Rio Grande do Sul  Eduardo Leite (PSDB)  alterou em torno de 480 normas do Código Ambiental do estado em seu primeiro ano de mandato  em 2019. A medida  sancionada em 2020  acompanhou o afrouxamento da política ambiental brasileira incentivada  à época  pelo então ministro Ricardo Salles  do MMA (Ministério de Meio Ambiente)  no governo Bolsonaro. Agora  em meio às enchentes no estado  ambientalistas criticam a gestão de Eduardo Leite e apontam o governador como o articulador  junto à Assembleia Legislativa  do que chamam de desmonte das leis estaduais de proteção ambiental. 📲Leia mais na #Folha: folha.com/ambiente  📌 Veja como ajudar as vítimas das chuvas no RS  link na bio  📷 Mauricio Tonetto - 28.set.2023/Secom 📝 Jorge Abreu  #PraTodosVerem: Fotografia colorida mostra o governador Eduardo Leite em sobrevoo de área alagada em Porto Alegre e Barra do Ribeiro (RS) em setembro de 2023. Sobre a imagem há o texto: \"Eduardo Leite mudou quase 500 normas ambientais em 2019",
-          "url": "https://www.instagram.com/folhadespaulo/p/C6vs8r9xXEq/"
-        },
-        {
-          "id": "trlacerda",
-          "parent": "Imprensa e redes sociais",
+          "id": "O Rio Grande do Sul e o Povo Gaúcho enfrentam nesse Momento ",
+          "parent": "trlacerda",
           "likes": 55305,
           "comments": 62,
           "engajamento": 55367,
@@ -698,8 +1079,8 @@
           "url": "https://www.instagram.com/trlacerda/p/C6hoa1FssSo/"
         },
         {
-          "id": "estadao",
-          "parent": "Imprensa e redes sociais",
+          "id": "CHUVAS NO SUL ⛈️ Um novo prognóstico aponta que a enchente q",
+          "parent": "estadao",
           "likes": 40771,
           "comments": 917,
           "engajamento": 41688,
@@ -707,8 +1088,8 @@
           "url": "https://www.instagram.com/estadao/p/C6pXcwwBoy4/"
         },
         {
-          "id": "brasildefato",
-          "parent": "Imprensa e redes sociais",
+          "id": "Meio ambiente em 1º lugar? 🤔  O Código Ambiental do Rio Gran",
+          "parent": "brasildefato",
           "likes": 37739,
           "comments": 1027,
           "engajamento": 38766,
@@ -716,8 +1097,8 @@
           "url": "https://www.instagram.com/brasildefato"
         },
         {
-          "id": "midianinja",
-          "parent": "Imprensa e redes sociais",
+          "id": "Quase 850 mil pessoas (844.673) foram impactadas até o momen",
+          "parent": "midianinja",
           "likes": 31076,
           "comments": 288,
           "engajamento": 31364,
@@ -725,8 +1106,8 @@
           "url": "https://www.instagram.com/wakandagossip/p/C6o6KpsJEqO/"
         },
         {
-          "id": "midianinja",
-          "parent": "Imprensa e redes sociais",
+          "id": "Você sabe o que é racismo ambiental?  Já parou para pensar q",
+          "parent": "midianinja",
           "likes": 25916,
           "comments": 680,
           "engajamento": 26596,
@@ -734,8 +1115,8 @@
           "url": "https://www.instagram.com/midianinja/reel/C2IJ-Bdrq9z/"
         },
         {
-          "id": "icl.noticias",
-          "parent": "Imprensa e redes sociais",
+          "id": "O Código Ambiental do Rio Grande do Sul foi atropelado pelo ",
+          "parent": "icl.noticias",
           "likes": 25372,
           "comments": 1076,
           "engajamento": 26448,
@@ -743,8 +1124,8 @@
           "url": "https://www.instagram.com/icl.noticias"
         },
         {
-          "id": "portalr7",
-          "parent": "Imprensa e redes sociais",
+          "id": "O presidente Luiz Inácio Lula da Silva afirmou  nesta quarta",
+          "parent": "portalr7",
           "likes": 18763,
           "comments": 6381,
           "engajamento": 25144,
@@ -752,8 +1133,8 @@
           "url": "https://www.instagram.com/portalr7/p/C742ZPmvwqo/"
         },
         {
-          "id": "bbcbrasil",
-          "parent": "Imprensa e redes sociais",
+          "id": "'Novo pacote da destruição' 📚🪓🪵⁠ ⁠ As inundações que deixara",
+          "parent": "bbcbrasil",
           "likes": 22581,
           "comments": 1005,
           "engajamento": 23586,
@@ -761,8 +1142,8 @@
           "url": "https://www.instagram.com/bbcbrasil"
         },
         {
-          "id": "uoloficial",
-          "parent": "Imprensa e redes sociais",
+          "id": "O Rio Grande do Sul chegou  nesta terça-feira (07)  às marca",
+          "parent": "uoloficial",
           "likes": 22530,
           "comments": 490,
           "engajamento": 23020,
@@ -770,8 +1151,8 @@
           "url": "https://www.instagram.com/uoloficial/reel/C6sCInXIdPz/"
         },
         {
-          "id": "brasildefato",
-          "parent": "Imprensa e redes sociais",
+          "id": "Risco de novas catástrofes 🚨  Nas últimas semanas  o Brasil ",
+          "parent": "brasildefato",
           "likes": 22075,
           "comments": 529,
           "engajamento": 22604,
@@ -779,8 +1160,8 @@
           "url": "https://www.instagram.com/brasildefato"
         },
         {
-          "id": "diariodonordeste",
-          "parent": "Imprensa e redes sociais",
+          "id": "Bombeiros  cães  embarcações e viaturas do Governo do Ceará ",
+          "parent": "diariodonordeste",
           "likes": 19999,
           "comments": 598,
           "engajamento": 20597,
@@ -788,8 +1169,8 @@
           "url": "https://www.instagram.com/diariodonordeste"
         },
         {
-          "id": "opovoonline",
-          "parent": "Imprensa e redes sociais",
+          "id": "A banda de rock Metallica fez uma doação milionária para as ",
+          "parent": "opovoonline",
           "likes": 20000,
           "comments": 396,
           "engajamento": 20396,
@@ -797,8 +1178,8 @@
           "url": "https://www.instagram.com/opovoonline/p/C60GF53tNrt/"
         },
         {
-          "id": "estadao",
-          "parent": "Imprensa e redes sociais",
+          "id": "TRAGÉDIA NO RS | O voluntariado costuma ser uma atividade qu",
+          "parent": "estadao",
           "likes": 16813,
           "comments": 102,
           "engajamento": 16915,
@@ -806,8 +1187,8 @@
           "url": "https://www.instagram.com/estadao"
         },
         {
-          "id": "otempo",
-          "parent": "Imprensa e redes sociais",
+          "id": "APOIO - O deputado federal Pedro Aihara (PRD) está no Rio Gr",
+          "parent": "otempo",
           "likes": 16260,
           "comments": 443,
           "engajamento": 16703,
@@ -815,8 +1196,8 @@
           "url": "https://www.instagram.com/blogdobg/p/C6rGblZs7Lh/"
         },
         {
-          "id": "forbesbr",
-          "parent": "Imprensa e redes sociais",
+          "id": "{Leia a matéria completa no link na bio ou nos stories}⁠ ⁠ P",
+          "parent": "forbesbr",
           "likes": 13293,
           "comments": 337,
           "engajamento": 13630,
@@ -824,8 +1205,8 @@
           "url": "https://www.instagram.com/forbesbr/p/C6vzgjgNgfK/"
         },
         {
-          "id": "brasildefato",
-          "parent": "Imprensa e redes sociais",
+          "id": "Tem gente e tem casa: por que não juntar? 🏡🤔  Com o desastre",
+          "parent": "brasildefato",
           "likes": 12993,
           "comments": 202,
           "engajamento": 13195,
@@ -833,8 +1214,8 @@
           "url": "https://www.instagram.com/brasildefato"
         },
         {
-          "id": "agenciapublica",
-          "parent": "Imprensa e redes sociais",
+          "id": "🚨 EMERGÊNCIA CLIMÁTICA NO RS | Em outubro do ano passado  o ",
+          "parent": "agenciapublica",
           "likes": 12682,
           "comments": 343,
           "engajamento": 13025,
@@ -842,8 +1223,8 @@
           "url": "https://www.instagram.com/agenciapublica"
         },
         {
-          "id": "brasildefato",
-          "parent": "Imprensa e redes sociais",
+          "id": "Eduardo Leite e o ‘negacionismo climático’ 🔴  “O Eduardo [Le",
+          "parent": "brasildefato",
           "likes": 11646,
           "comments": 292,
           "engajamento": 11938,
@@ -851,8 +1232,8 @@
           "url": "https://www.instagram.com/eduardoleite45/reel/DBw2QZmSI-k/"
         },
         {
-          "id": "opovoonline",
-          "parent": "Imprensa e redes sociais",
+          "id": "As fortes chuvas que atingem o Rio Grande do Sul desde a sem",
+          "parent": "opovoonline",
           "likes": 10771,
           "comments": 200,
           "engajamento": 10971,
@@ -860,8 +1241,8 @@
           "url": "https://www.instagram.com/opovoonline/reel/DF-56MWvwHG/"
         },
         {
-          "id": "sulvinteum",
-          "parent": "Imprensa e redes sociais",
+          "id": "Poucos dias antes do início das chuvas que infligem ao Rio G",
+          "parent": "sulvinteum",
           "likes": 9664,
           "comments": 324,
           "engajamento": 9988,
@@ -869,8 +1250,8 @@
           "url": "https://www.instagram.com/sulvinteum"
         },
         {
-          "id": "revistaforum",
-          "parent": "Imprensa e redes sociais",
+          "id": "O jornalismo chapa-branca montou acampamento em frente a uma",
+          "parent": "revistaforum",
           "likes": 7949,
           "comments": 1055,
           "engajamento": 9004,
@@ -878,8 +1259,8 @@
           "url": "https://www.instagram.com/revistaforum"
         },
         {
-          "id": "revistaoeste",
-          "parent": "Imprensa e redes sociais",
+          "id": "Reportagem de <redacted_mention>  O número de vítimas fatais",
+          "parent": "revistaoeste",
           "likes": 7715,
           "comments": 362,
           "engajamento": 8077,
@@ -887,8 +1268,8 @@
           "url": "https://www.instagram.com/revistaoeste"
         },
         {
-          "id": "jornaloglobo",
-          "parent": "Imprensa e redes sociais",
+          "id": "PROJETOS | As enchentes que assolam o Rio Grande do Sul reac",
+          "parent": "jornaloglobo",
           "likes": 7139,
           "comments": 840,
           "engajamento": 7979,
@@ -896,8 +1277,8 @@
           "url": "https://www.instagram.com/jornaloglobo/p/C7MIP3OKSvt/"
         },
         {
-          "id": "revistarealce",
-          "parent": "Imprensa e redes sociais",
+          "id": "A tragédia ambiental que assola o Rio Grande do Sul acendeu ",
+          "parent": "revistarealce",
           "likes": 7556,
           "comments": 276,
           "engajamento": 7832,
@@ -905,8 +1286,8 @@
           "url": "https://www.instagram.com/inescoficial/reel/C7FP4ppiT83/"
         },
         {
-          "id": "showdavida",
-          "parent": "Imprensa e redes sociais",
+          "id": "RIO GRANDE DO SUL  Neste domingo  o #Fantástico acompanha as",
+          "parent": "showdavida",
           "likes": 5853,
           "comments": 153,
           "engajamento": 6006,
@@ -914,8 +1295,8 @@
           "url": "https://www.instagram.com/showdavida/reel/C6j4oDDvStJ/"
         },
         {
-          "id": "andanews",
-          "parent": "Imprensa e redes sociais",
+          "id": "Cerca de seis mil animais ilhados pelas chuvas que atingem o",
+          "parent": "andanews",
           "likes": 5681,
           "comments": 243,
           "engajamento": 5924,
@@ -923,8 +1304,8 @@
           "url": "https://www.instagram.com/andanews/p/C6q-WVgKglm/?locale=gb&hl=am-et"
         },
         {
-          "id": "vejanoinsta",
-          "parent": "Imprensa e redes sociais",
+          "id": "Boa parte dos atores que hoje estendem a mão para o Rio Gran",
+          "parent": "vejanoinsta",
           "likes": 5109,
           "comments": 611,
           "engajamento": 5720,
@@ -932,8 +1313,8 @@
           "url": "https://www.instagram.com/vejanoinsta"
         },
         {
-          "id": "sulvinteum",
-          "parent": "Imprensa e redes sociais",
+          "id": "Poucos dias antes do início das chuvas que infligem ao Rio G",
+          "parent": "sulvinteum",
           "likes": 5293,
           "comments": 110,
           "engajamento": 5403,
@@ -941,8 +1322,8 @@
           "url": "https://www.instagram.com/sulvinteum"
         },
         {
-          "id": "jc_pe",
-          "parent": "Imprensa e redes sociais",
+          "id": "As famílias que perderam móveis  eletrodomésticos e outros o",
+          "parent": "jc_pe",
           "likes": 4358,
           "comments": 682,
           "engajamento": 5040,
@@ -950,8 +1331,8 @@
           "url": "https://www.instagram.com/oestenoticiasoficial/p/C7CPqOuONzU/"
         },
         {
-          "id": "jrjundiai",
-          "parent": "Imprensa e redes sociais",
+          "id": "Um avião repleto de amor e doações para as vítimas das chuva",
+          "parent": "jrjundiai",
           "likes": 4722,
           "comments": 88,
           "engajamento": 4810,
@@ -959,8 +1340,8 @@
           "url": "https://www.instagram.com/jrjundiai"
         },
         {
-          "id": "metropolenews",
-          "parent": "Imprensa e redes sociais",
+          "id": "🌎 Siga <redacted_mention> / A ministra do Meio Ambiente do G",
+          "parent": "metropolenews",
           "likes": 3299,
           "comments": 1447,
           "engajamento": 4746,
@@ -968,8 +1349,8 @@
           "url": "https://www.instagram.com/fatoenoticiaoficial/p/DEv0jkxOfD4/"
         },
         {
-          "id": "brasildefato",
-          "parent": "Imprensa e redes sociais",
+          "id": "O preço do arroz vai subir? 🌧  A catástrofe no Rio Grande do",
+          "parent": "brasildefato",
           "likes": 4447,
           "comments": 58,
           "engajamento": 4505,
@@ -977,8 +1358,8 @@
           "url": "https://www.instagram.com/brasildefato/reel/C6wxTzzoM-9/"
         },
         {
-          "id": "metropoles",
-          "parent": "Imprensa e redes sociais",
+          "id": "Filho caçula do presidente Lula  Luís Cláudio Lula da Silva ",
+          "parent": "metropoles",
           "likes": 3058,
           "comments": 1031,
           "engajamento": 4089,
@@ -986,8 +1367,8 @@
           "url": "https://www.instagram.com/metropoles/p/C6q0yz4s-2c/"
         },
         {
-          "id": "siteoeco",
-          "parent": "Imprensa e redes sociais",
+          "id": "Por manobra de Flávio Bolsonaro  plano de adaptação às mudan",
+          "parent": "siteoeco",
           "likes": 3423,
           "comments": 464,
           "engajamento": 3887,
@@ -995,8 +1376,8 @@
           "url": "https://www.instagram.com/siteoeco"
         },
         {
-          "id": "oliberal",
-          "parent": "Imprensa e redes sociais",
+          "id": "ECONOMIA Desde que o desastre ambiental teve início no Rio G",
+          "parent": "oliberal",
           "likes": 3602,
           "comments": 175,
           "engajamento": 3777,
@@ -1004,8 +1385,8 @@
           "url": "https://www.instagram.com/oliberal"
         },
         {
-          "id": "jornaldarecord",
-          "parent": "Imprensa e redes sociais",
+          "id": "Em meio à maior catástrofe ambiental do estado do Rio Grande",
+          "parent": "jornaldarecord",
           "likes": 3124,
           "comments": 89,
           "engajamento": 3213,
@@ -1013,8 +1394,8 @@
           "url": "https://www.instagram.com/jornaldarecord"
         },
         {
-          "id": "escoladeativismo",
-          "parent": "Racismo ambiental",
+          "id": "90 pessoas mortas. 132 pessoas desaparecidas. 361 pessoas fe",
+          "parent": "escoladeativismo",
           "likes": 46389,
           "comments": 549,
           "engajamento": 46938,
@@ -1022,8 +1403,8 @@
           "url": "https://www.instagram.com/brancamessina/p/C6rQBMTJlXy/"
         },
         {
-          "id": "zoebmartinez",
-          "parent": "Racismo ambiental",
+          "id": "O que seria racismo ambiental e climático? Heeeeeeeelllppp!",
+          "parent": "zoebmartinez",
           "likes": 43469,
           "comments": 3013,
           "engajamento": 46482,
@@ -1031,8 +1412,8 @@
           "url": "https://www.instagram.com/taliriapetrone/p/CaUa1QXv0pO/"
         },
         {
-          "id": "gutozacariasmbl",
-          "parent": "Racismo ambiental",
+          "id": "'RACISMO AMBIENTAL' a nova invenção da esquerda!!  Siga <red",
+          "parent": "gutozacariasmbl",
           "likes": 10160,
           "comments": 209,
           "engajamento": 10369,
@@ -1040,8 +1421,8 @@
           "url": "https://www.instagram.com/gutozacariasmbl"
         },
         {
-          "id": "brunozambelli.sp",
-          "parent": "Racismo ambiental",
+          "id": "Presidente da OAB adverte para consequências do ‘racismo amb",
+          "parent": "brunozambelli.sp",
           "likes": 6342,
           "comments": 1881,
           "engajamento": 8223,
@@ -1049,8 +1430,8 @@
           "url": "https://www.instagram.com/brunozambelli.sp/reel/C7Mv2LoLKhv/"
         },
         {
-          "id": "celia.xakriaba",
-          "parent": "Racismo ambiental",
+          "id": "As populações de periferia são as mais afetadas pela crise c",
+          "parent": "celia.xakriaba",
           "likes": 5538,
           "comments": 49,
           "engajamento": 5587,
@@ -1058,8 +1439,8 @@
           "url": "https://www.instagram.com/celia.xakriaba"
         },
         {
-          "id": "marquito.sc",
-          "parent": "Racismo ambiental",
+          "id": "As periferias não recebem o mesmo cuidado que áreas centrais",
+          "parent": "marquito.sc",
           "likes": 2004,
           "comments": 87,
           "engajamento": 2091,
@@ -1067,8 +1448,8 @@
           "url": "https://www.instagram.com/marquito.sc/reel/DAi7ppmxB7U/"
         },
         {
-          "id": "helio_beltrao",
-          "parent": "Racismo ambiental",
+          "id": "Agora ele quer falar sobre o quê? Racismo ambiental???",
+          "parent": "helio_beltrao",
           "likes": 1764,
           "comments": 272,
           "engajamento": 2036,
@@ -1076,8 +1457,8 @@
           "url": "https://www.instagram.com/alexander.a.gomes/p/DIQ19QvRgf1/"
         },
         {
-          "id": "chrisgonzatti",
-          "parent": "Racismo ambiental",
+          "id": "Já tinha ouvido falar em r4c1sm0 ambiental? No Rio Grande do",
+          "parent": "chrisgonzatti",
           "likes": 1529,
           "comments": 48,
           "engajamento": 1577,
@@ -1085,8 +1466,8 @@
           "url": "https://www.instagram.com/chrisgonzatti/reel/C7MXDYmLrXp/"
         },
         {
-          "id": "cidadeoperariaoficial",
-          "parent": "Racismo ambiental",
+          "id": "Vocês conheciam o termo “Racismo Ambiental “? A diretora-ger",
+          "parent": "cidadeoperariaoficial",
           "likes": 968,
           "comments": 381,
           "engajamento": 1349,
@@ -1094,8 +1475,8 @@
           "url": "https://www.instagram.com/cidadeoperariaoficial"
         },
         {
-          "id": "opiauiense",
-          "parent": "Racismo ambiental",
+          "id": "Precisamos combater o racismo ambiental. Teresina também sof",
+          "parent": "opiauiense",
           "likes": 1044,
           "comments": 277,
           "engajamento": 1321,
@@ -1103,8 +1484,8 @@
           "url": "https://www.instagram.com/opiauiense"
         },
         {
-          "id": "conectas",
-          "parent": "Racismo ambiental",
+          "id": "O racismo ambiental não é apenas uma teoria  é uma realidade",
+          "parent": "conectas",
           "likes": 1311,
           "comments": 5,
           "engajamento": 1316,
@@ -1112,8 +1493,8 @@
           "url": "https://www.instagram.com/conectas"
         },
         {
-          "id": "dceufrj",
-          "parent": "Racismo ambiental",
+          "id": "POVO SOFRE COM ABANDONO DO PODER PÚBLICO E FORTES CHUVAS: Nã",
+          "parent": "dceufrj",
           "likes": 1053,
           "comments": 9,
           "engajamento": 1062,
@@ -1121,8 +1502,8 @@
           "url": "https://www.instagram.com/dceufrj/p/C2F6-wPJIc6/"
         },
         {
-          "id": "ibsustentabilidade",
-          "parent": "Racismo ambiental e Enchente do Rio Grande do Sul",
+          "id": "No vídeo  <redacted_mention> e <redacted_mention> realizando",
+          "parent": "ibsustentabilidade",
           "likes": 136012,
           "comments": 2434,
           "engajamento": 138446,
@@ -1130,8 +1511,8 @@
           "url": "https://www.instagram.com/ibsustentabilidade"
         },
         {
-          "id": "brunacrioula",
-          "parent": "Racismo ambiental e Enchente do Rio Grande do Sul",
+          "id": "TEM PRETO NO SUL! ✊🏿  Como seremos atendidos senão somos nem",
+          "parent": "brunacrioula",
           "likes": 16061,
           "comments": 490,
           "engajamento": 16551,
@@ -1139,8 +1520,8 @@
           "url": "https://www.instagram.com/brunacrioula"
         },
         {
-          "id": "sitemundonegro",
-          "parent": "Racismo ambiental e Enchente do Rio Grande do Sul",
+          "id": "A prefeitura de Porto Alegre criou um lixão a céu aberto ao ",
+          "parent": "sitemundonegro",
           "likes": 12488,
           "comments": 253,
           "engajamento": 12741,
@@ -1148,8 +1529,8 @@
           "url": "https://www.instagram.com/sitemundonegro/p/C7pudyYI6qV/?hl=af"
         },
         {
-          "id": "lucianagenro",
-          "parent": "Racismo ambiental e Enchente do Rio Grande do Sul",
+          "id": "Intolerância religiosa é crime! A influenciadora Michele Dia",
+          "parent": "lucianagenro",
           "likes": 7477,
           "comments": 705,
           "engajamento": 8182,
@@ -1157,8 +1538,8 @@
           "url": "https://www.instagram.com/lucianagenro/p/C7HTuMkuyjC/"
         },
         {
-          "id": "greenpeacebrasil",
-          "parent": "Racismo ambiental e Enchente do Rio Grande do Sul",
+          "id": "#RacismoAmbiental - Em meio à tragédia climática que atinge ",
+          "parent": "greenpeacebrasil",
           "likes": 6407,
           "comments": 168,
           "engajamento": 6575,
@@ -1166,8 +1547,8 @@
           "url": "https://www.instagram.com/greenpeacebrasil/reel/C7znpgKx_CM/"
         },
         {
-          "id": "midiaindigenaoficial",
-          "parent": "Racismo ambiental e Enchente do Rio Grande do Sul",
+          "id": "A crise climática tem afetado a todos  nós povos indígenas d",
+          "parent": "midiaindigenaoficial",
           "likes": 4046,
           "comments": 11,
           "engajamento": 4057,
@@ -1175,8 +1556,8 @@
           "url": "https://www.instagram.com/p/C6qvbsLOHYZ/"
         },
         {
-          "id": "mauriciodovolei",
-          "parent": "Rio de Janeiro",
+          "id": "Ministra de Lula associa chuvas no Rio a “racismo ambiental ",
+          "parent": "mauriciodovolei",
           "likes": 48417,
           "comments": 11934,
           "engajamento": 60351,
@@ -1184,8 +1565,8 @@
           "url": "https://www.instagram.com/mauriciodovolei"
         },
         {
-          "id": "alexandre_garcia1.0",
-          "parent": "Rio de Janeiro",
+          "id": "Sigam <redacted_mention> 🔰. A ministra da Igualdade Racial  ",
+          "parent": "alexandre_garcia1.0",
           "likes": 13450,
           "comments": 10401,
           "engajamento": 23851,
@@ -1193,8 +1574,8 @@
           "url": "https://www.instagram.com/redeondadigitall/p/DHG-JIwuPsL/a-ministra-da-igualdade-racial-anielle-franco-reafirmou-a-exist%C3%AAncia-do-racismo-/"
         },
         {
-          "id": "aniellefranco",
-          "parent": "Rio de Janeiro",
+          "id": "Sobre chuvas no Rio de Janeiro  racismo ambiental e como ele",
+          "parent": "aniellefranco",
           "likes": 16412,
           "comments": 4722,
           "engajamento": 21134,
@@ -1202,8 +1583,8 @@
           "url": "https://www.instagram.com/aniellefranco/reel/C2GmiPpr_69/"
         },
         {
-          "id": "canal_patriota",
-          "parent": "Rio de Janeiro",
+          "id": "A ministra da Igualdade Racial  Anielle Franco disse estar a",
+          "parent": "canal_patriota",
           "likes": 7900,
           "comments": 1802,
           "engajamento": 9702,
@@ -1211,8 +1592,8 @@
           "url": "https://www.instagram.com/alegarcia/reel/C2N6_BpPeVb/?locale=ko&hl=am-et"
         },
         {
-          "id": "universocurioso",
-          "parent": "Rio de Janeiro",
+          "id": "A ministra da Igualdade Racial  Anielle Franco  lamentou os ",
+          "parent": "universocurioso",
           "likes": 6238,
           "comments": 1797,
           "engajamento": 8035,

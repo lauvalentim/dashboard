@@ -1,0 +1,50 @@
+{
+  "Ajuda": {
+    "total_posts": 88,
+    "total_authors": 77,
+    "avg_likes": 1744,
+    "avg_comments": 83,
+    "avg_engajamento": 1828,
+    "top_author": "midianinja"
+  },
+  "Enchente RS": {
+    "total_posts": 377,
+    "total_authors": 304,
+    "avg_likes": 2644,
+    "avg_comments": 83,
+    "avg_engajamento": 2727,
+    "top_author": "ibsustentabilidade"
+  },
+  "Imprensa": {
+    "total_posts": 247,
+    "total_authors": 178,
+    "avg_likes": 3140,
+    "avg_comments": 132,
+    "avg_engajamento": 3272,
+    "top_author": "midianinja"
+  },
+  "Racismo": {
+    "total_posts": 74,
+    "total_authors": 65,
+    "avg_likes": 1856,
+    "avg_comments": 107,
+    "avg_engajamento": 1963,
+    "top_author": "escoladeativismo"
+  },
+  "Racismo + Enchentes": {
+    "total_posts": 40,
+    "total_authors": 35,
+    "avg_likes": 5294,
+    "avg_comments": 126,
+    "avg_engajamento": 5420,
+    "top_author": "ibsustentabilidade"
+  },
+  "RJ": {
+    "total_posts": 27,
+    "total_authors": 26,
+    "avg_likes": 4164,
+    "avg_comments": 1388,
+    "avg_engajamento": 5553,
+    "top_author": "mauriciodovolei"
+  }
+}
