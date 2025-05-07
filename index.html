@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DataViz RGDS</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -148,42 +149,18 @@
 
   <!-- CHORD DIAGRAM SECTION -->
   <section id="section3">
-    <div id="chord-panel">
-      <h2>Filtros</h2>
-      <label for="clusterSelect">Cluster:</label>
-      <select id="clusterSelect">
-        <option value="Todos">Todos</option>
-        <option value="C1">C1</option>
-        <option value="C2">C2</option>
-        <option value="C3">C3</option>
-        <option value="C4">C4</option>
-        <option value="C5">C5</option>
-        <option value="C6">C6</option>
-      </select>
+    <div id="chart" style="width: 100%; height: 100vh;"></div>
 
-      <label for="minEngajamento">Engajamento Mínimo:</label>
-      <input type="range" id="minEngajamento" min="1" max="10" value="1">
-      <span id="engajamentoValue">1</span>
 
-      <button onclick="filtrarDados()">Aplicar Filtros</button>
-    </div>
 
-    <div id="chord-diagram"></div>
   </section>
 
+
   <!-- Scripts -->
-  <script src="https://d3js.org/d3.v7.min.js"></script>
   <script src="https://unpkg.com/circos@latest/dist/circos.min.js"></script>
-  <script src="script_grafo.js"></script>
-
-  <script src="https://unpkg.com/circos@latest/dist/circos.min.js"></script>
-  <script type="module">
-    import { drawCircosDiagram } from './script_chord.js';
-    drawCircosDiagram('#chord-diagram');
-  </script>
-
   <script src="interface.js"></script>
-
+  <script type="module" src="script_chord.js"></script>
+  <script src="script_grafo.js"></script>
 </body>
 
 </html>
