@@ -108,3 +108,8 @@ window.initInterface = function () {
     }
   });
 }
+
+
+window.addEventListener("DOMContentLoaded", () => {
+  initInterface();
+});

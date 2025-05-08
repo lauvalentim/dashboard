@@ -1,80 +1,35 @@
 
-async function drawChord() {
-  const width = 1000;
-  const height = 1000;
-  const outerRadius = Math.min(width, height) * 0.5 - 80;
-  const innerRadius = outerRadius - 20;
+function closePanelChord() {
+  d3.select("#panel-chord-data").classed("show", false);
+}
 
-  const data = await d3.json("chord.json");
-  const nodes = data.ideograms;
-  const links = data.links;
-
-  const nameIndex = new Map(nodes.map((d, i) => [d.id, i]));
-  const matrixSize = nodes.length;
-  const matrix = Array.from({ length: matrixSize }, () => new Array(matrixSize).fill(0));
-
-  for (const link of links) {
-    const source = nameIndex.get(link.source.id);
-    const target = nameIndex.get(link.target.id);
-    if (source !== undefined && target !== undefined) {
-      matrix[source][target] = link.value;
-    }
-  }
-
-  const userNodes = nodes.filter(d => !d.id.includes('_P'));
-  const postNodes = nodes.filter(d => d.id.includes('_P'));
-  const fullNodes = [...userNodes, ...postNodes];
-  const fullMatrix = Array.from({ length: fullNodes.length }, () => new Array(fullNodes.length).fill(0));
-  const fullIndex = new Map(fullNodes.map((d, i) => [d.id, i]));
-
-  for (const link of links) {
-    const source = fullIndex.get(link.source.id);
-    const target = fullIndex.get(link.target.id);
-    if (source !== undefined && target !== undefined) {
-      fullMatrix[source][target] = link.value;
-    }
-  }
-
-  const chord = d3.chord()
-    .padAngle(0.04)
-    .sortSubgroups(d3.descending)
-    (fullMatrix);
-
-  const arc = d3.arc()
-    .innerRadius(innerRadius)
-    .outerRadius(outerRadius);
-
-  const ribbon = d3.ribbon()
-    .radius(innerRadius);
+function drawChord(data) {
+  const width = 900;
+  const height = 900;
+  const innerRadius = Math.min(width, height) * 0.32;
+  const outerRadius = innerRadius * 1.1;
 
   const svg = d3.select("#chart")
     .append("svg")
     .attr("viewBox", [-width / 2, -height / 2, width, height])
-    .style("font", "12px sans-serif");
+    .style("font", "10px sans-serif");
 
-  const colorScale = d3.scaleOrdinal()
-    .domain(fullNodes.map(d => d.id))
-    .range(fullNodes.map(d => d.id.includes('_P') ? '#66c2a5' : '#fc8d62'));
+  const fullNodes = data.ideograms;
+  const idIndex = new Map(fullNodes.map((d, i) => [d.id, i]));
 
-  const clusterColorMap = {
-    'governo': '#a6cee3',
-    'mídia_alternativa': '#1f78b4',
-    'movimentos': '#b2df8a',
-    'ambientalistas': '#33a02c',
-    'indígena': '#fb9a99',
-    'outros': '#cab2d6'
-  };
+  const matrix = Array.from({ length: fullNodes.length }, () => new Array(fullNodes.length).fill(0));
+  for (const link of data.links) {
+    const source = idIndex.get(link.source.id);
+    const target = idIndex.get(link.target.id);
+    if (source != null && target != null) {
+      matrix[source][target] = link.value;
+    }
+  }
 
-  // arco externo para clusters dos posts
-  svg.append("g")
-    .selectAll("path")
-    .data(chord.groups.filter(d => fullNodes[d.index].id.includes("_P")))
-    .join("path")
-    .attr("d", d3.arc().innerRadius(outerRadius + 6).outerRadius(outerRadius + 12))
-    .attr("fill", d => {
-      const cluster = fullNodes[d.index].cluster || 'outros';
-      return clusterColorMap[cluster] || '#999';
-    });
+  const chord = d3.chordDirected().padAngle(0.01).sortSubgroups(d3.descending)(matrix);
+
+  const arc = d3.arc().innerRadius(innerRadius).outerRadius(outerRadius);
+  const ribbon = d3.ribbonArrow().radius(innerRadius - 1).padAngle(1 / innerRadius);
 
   const group = svg.append("g")
     .selectAll("g")
@@ -82,53 +37,109 @@ async function drawChord() {
     .join("g");
 
   group.append("path")
-    .attr("fill", d => colorScale(fullNodes[d.index].id))
-    .attr("stroke", d => d3.rgb(colorScale(fullNodes[d.index].id)).darker(1))
-    .attr("d", arc);
+    .attr("fill", d => fullNodes[d.index].color)
+    .attr("d", arc)
+    .on("mouseover", function(event, d) {
+      const meta = data.meta[fullNodes[d.index].id];
+      if (meta) {
+        d3.select(this)
+          .attr("stroke", "#fff")
+          .attr("stroke-width", 2);
 
-  group.append("text")
-    .each(d => { d.angle = (d.startAngle + d.endAngle) / 2; })
-    .attr("dy", ".35em")
-    .attr("transform", d => `
-      rotate(${(d.angle * 180 / Math.PI - 90)})
-      translate(${outerRadius + 14})
-      ${d.angle > Math.PI ? "rotate(180)" : ""}
-    `)
-    .attr("text-anchor", d => d.angle > Math.PI ? "end" : "start")
-    .text(d => fullNodes[d.index].label)
-    .style("fill", "#f0f0f0");
+        d3.select("#tooltip")
+          .style("display", "block")
+          .html(`<strong>@${meta.username}</strong><br>${meta.full_message}`)
+          .style("left", (event.pageX + 10) + "px")
+          .style("top", (event.pageY - 28) + "px");
+      }
+    })
+    .on("mouseout", function() {
+      d3.select(this).attr("stroke", null);
+      d3.select("#tooltip").style("display", "none");
+    });
 
   svg.append("g")
-    .attr("fill-opacity", 0.7)
+    .attr("fill-opacity", 0.75)
     .selectAll("path")
     .data(chord)
     .join("path")
     .attr("d", ribbon)
-    .attr("fill", d => colorScale(fullNodes[d.source.index].id))
-    .attr("stroke", d => d3.rgb(colorScale(fullNodes[d.source.index].id)).darker());
-
-  svg.selectAll("g path")
+    .attr("fill", d => fullNodes[d.target.index].color)
     .append("title")
-    .text(d => {
-      if (!d.source || !d.target) return "";
-      const source = fullNodes[d.source.index]?.label || "desconhecido";
-      const target = fullNodes[d.target.index]?.label || "desconhecido";
-      return `${source} → ${target}\n${fullMatrix[d.source.index][d.target.index]} interações`;
-    });
+    .text(d => `${fullNodes[d.source.index].id} → ${fullNodes[d.target.index].id}`);
+
+  group.on("click", (event, d) => {
+    const node = fullNodes[d.index];
+    const meta = data.meta[node.id];
+    if (!meta) return;
+
+    let panelHtml = "";
+
+    if (node.type === "post") {
+      panelHtml = `
+        <div class="post-box">
+          <strong>@${meta.username}</strong>
+          <p>"${meta.full_message}"</p>
+          <div class="post-meta">
+            ❤️ ${meta.likes} 💬 ${meta.comments} 🔁 ${meta.engajamento}
+          </div>
+          <p><span class="badge">Cluster ${meta.cluster}</span></p>
+          <a class="post-link" href="${meta.url}" target="_blank">🔗 Ver no Instagram</a>
+        </div>
+      `;    
+    } else if (node.type === "user") {
+      panelHtml = `
+        <div class="post-box">
+          <strong>Usuário:</strong> @${node.label}<br>
+          <p class="post-meta">Cluster: ${node.cluster || 'n/d'}<br>
+          Tipo: Usuário</p>
+        </div>
+      `;
+    }    
+
+    showChordPanelContent(panelHtml);
+  });
 
   svg.append("text")
-    .attr("x", -width / 2 + 30)
-    .attr("y", -height / 2 + 40)
-    .attr("fill", "#ffffff")
-    .attr("font-size", "18px")
+    .attr("x", 0)
+    .attr("y", -outerRadius - 40)
+    .attr("text-anchor", "middle")
+    .attr("fill", "#ccc")
+    .style("font-size", "14px")
     .text("Usuários");
 
   svg.append("text")
-    .attr("x", width / 2 - 100)
-    .attr("y", -height / 2 + 40)
-    .attr("fill", "#ffffff")
-    .attr("font-size", "18px")
-    .text("Posts");
+    .attr("x", 0)
+    .attr("y", outerRadius + 50)
+    .attr("text-anchor", "middle")
+    .attr("fill", "#ccc")
+    .style("font-size", "14px")
+    .text("Postagens");
 }
 
-drawChord();
+fetch("chord.json")
+  .then(response => response.json())
+  .then(data => drawChord(data))
+  .catch(error => console.error("Erro ao carregar o JSON:", error));
+
+// Controle de visibilidade
+function isSection3Visible() {
+  const section3 = document.getElementById('section3');
+  const rect = section3.getBoundingClientRect();
+  return rect.top < window.innerHeight && rect.bottom >= 0;
+}
+
+function showChordPanelContent(htmlContent) {
+  if (isSection3Visible()) {
+    d3.select("#panel-chord-content").html(htmlContent);
+    d3.select("#panel-chord-data").classed("show", true);
+  } else {
+    console.warn("🔒 Painel da Section3 bloqueado: section3 não está visível.");
+  }
+}
+
+window.addEventListener('scroll', () => {
+  if (!isSection3Visible()) {
+    d3.select("#panel-chord-data").classed("show", false);
+  }
+});
