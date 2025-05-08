@@ -9,14 +9,24 @@ body {
   background: linear-gradient(-145deg, #e9e9e9d0, #d6d6d6);
 }
 
-html, body {
+
+html,
+body {
   height: 100%;
-  overflow-y: auto;
+}
+
+#zoom-controls,
+#mini-menu,
+#rotation-control {
+  max-width: 100vw;
   overflow-x: hidden;
 }
 
 /*Front-Section*/
 #front-section {
+  section:not(:has(svg, .front-content, #chart)) {
+    display: none;
+  }  
   position: relative;
   width: 100%;
   height: 100vh;
@@ -192,7 +202,7 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 12px;
+  border-radius: none;
 }
 
 #btn-ver-grafo {
@@ -281,6 +291,9 @@ html, body {
 
 /* Seções de Conteúdo */
 .info-section {
+  section:not(:has(svg, .front-content, #chart)) {
+    display: none;
+  }  
   overflow-y: auto;
   position: absolute;
   top: -100%;
@@ -575,9 +588,10 @@ html, body {
 
 /*Diagrama em Corda*/
 #section3 {
+  section:not(:has(svg, .front-content, #chart)) {
+    display: none;
+  }  
   position: relative;
-  height: 100vh;
-  width: 100vw;
   background: #1b1b1b;
 }
 
@@ -610,6 +624,7 @@ html, body {
     opacity: 0;
     transform: translateX(-30px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -646,23 +661,10 @@ html, body {
   color: #f55;
 }
 
-#panel-chord-content section + section {
+#panel-chord-content section+section {
   margin-top: 20px;
   padding-top: 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.badge {
-  display: inline-block;
-  padding: 4px 10px;
-  margin-top: 6px;
-  font-size: 11px;
-  font-weight: 600;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.15);
-  color: #fff;
-  backdrop-filter: blur(6px);
-  letter-spacing: 0.4px;
 }
 
 .post-box {
@@ -712,6 +714,9 @@ html, body {
 
 /*Section*/
 section {
+  section:not(:has(svg, .front-content, #chart)) {
+    display: none;
+  }  
   width: 100%;
   scroll-margin-top: 50px;
   padding: 20px 10px;
@@ -719,8 +724,9 @@ section {
 }
 
 #grafo-section {
-  height: 100vh;
-  width: 100vw;
+  section:not(:has(svg, .front-content, #chart)) {
+    display: none;
+  }  
   display: flex;
   justify-content: center;
   align-items: center;

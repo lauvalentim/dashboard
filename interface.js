@@ -22,15 +22,17 @@ window.initInterface = function () {
   // ===== Abrir/fechar painel principal =====
   if (menuToggle && infoPanel) {
     menuToggle.addEventListener("click", () => {
+      closeOtherPanels();
       infoPanel.classList.add("open");
     });
-  }
+  }    
 
   if (openAnalisesBtn && infoPanel) {
     openAnalisesBtn.addEventListener("click", () => {
+      closeOtherPanels();
       infoPanel.classList.add("open");
     });
-  }
+  }    
 
   if (closeBtn && infoPanel) {
     closeBtn.addEventListener("click", () => {
@@ -39,6 +41,15 @@ window.initInterface = function () {
       if (menuToggle) menuToggle.style.display = "block";
     });
   }
+
+  function closeOtherPanels() {
+    const chordPanel = document.getElementById("panel-chord-data");
+    const explorarPanel = document.getElementById("explorar-cluster-panel");
+
+    if (chordPanel) chordPanel.classList.remove("show");
+    if (explorarPanel) explorarPanel.classList.remove("open");
+  }
+  // ===== Abrir/fechar painel de informações =====
 
   infoTabs.forEach(tab => {
     tab.addEventListener("click", () => {
@@ -73,9 +84,10 @@ window.initInterface = function () {
 
   if (explorarBtn && explorarPanel) {
     explorarBtn.addEventListener("click", () => {
+      closeOtherPanels();
       explorarPanel.classList.toggle("open");
     });
-  }
+  }    
 
   if (closeExplorarBtn && explorarPanel) {
     closeExplorarBtn.addEventListener("click", () => {
@@ -109,7 +121,16 @@ window.initInterface = function () {
   });
 }
 
+// Fecha todos os painéis e popups flutuantes ao trocar de seção
+window.closeAllFloatingPanels = function () {
+  document.getElementById("post-popup")?.classList.add("hidden");
+  document.getElementById("panel-chord-data")?.classList.remove("show");
+  document.getElementById("info-panel")?.classList.remove("open");
+  document.getElementById("explorar-cluster-panel")?.classList.remove("open");
+};
+
 
 window.addEventListener("DOMContentLoaded", () => {
   initInterface();
 });
+

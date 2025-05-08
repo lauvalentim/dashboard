@@ -533,3 +533,20 @@ if (section2) {
     if (section2Late) observer2.observe(section2Late);
   });
 }
+
+// Fecha o popup de post se sair da section2
+function isSection2Visible() {
+  const section2 = document.getElementById('grafo-section');
+  if (!section2) return false;
+  const rect = section2.getBoundingClientRect();
+  return rect.top < window.innerHeight && rect.bottom >= 0;
+}
+
+window.addEventListener('scroll', () => {
+  if (!isSection2Visible()) {
+    const popup = document.getElementById("post-popup");
+    if (popup && !popup.classList.contains("hidden")) {
+      popup.classList.add("hidden");
+    }
+  }
+});

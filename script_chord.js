@@ -131,8 +131,16 @@ function isSection3Visible() {
 
 function showChordPanelContent(htmlContent) {
   if (isSection3Visible()) {
+    // fecha painéis concorrentes
+    document.getElementById("info-panel")?.classList.remove("open");
+    document.getElementById("explorar-cluster-panel")?.classList.remove("open");
+
+    if (typeof closeAllFloatingPanels === "function") {
+      closeAllFloatingPanels();
+    }
     d3.select("#panel-chord-content").html(htmlContent);
     d3.select("#panel-chord-data").classed("show", true);
+    
   } else {
     console.warn("🔒 Painel da Section3 bloqueado: section3 não está visível.");
   }
