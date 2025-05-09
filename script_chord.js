@@ -1,4 +1,3 @@
-
 function closePanelChord() {
   d3.select("#panel-chord-data").classed("show", false);
 }
@@ -36,10 +35,82 @@ function drawChord(data) {
     .data(chord.groups)
     .join("g");
 
+  const clusterArc = d3.arc()
+    .innerRadius(outerRadius + 6)
+    .outerRadius(outerRadius + 16);
+
+  const clusterColors = d3.scaleOrdinal(d3.schemeCategory10);
+
+  const clusterMap = new Map();
+  const postNodes = fullNodes
+    .map((node, i) => ({ ...node, index: i }))
+    .filter(node => node.type === "post");
+
+  postNodes.forEach(node => {
+    const cluster = node.cluster || "Sem Cluster";
+    if (!clusterMap.has(cluster)) {
+      clusterMap.set(cluster, []);
+    }
+    clusterMap.get(cluster).push(node.index);
+  });
+
+  clusterMap.forEach((indices, clusterName) => {
+    const startAngle = d3.min(indices.map(idx => chord.groups[idx]?.startAngle));
+    const endAngle = d3.max(indices.map(idx => chord.groups[idx]?.endAngle));
+
+    if (startAngle != null && endAngle != null && !isNaN(startAngle) && !isNaN(endAngle)) {
+    svg.append("path")
+      .attr("d", clusterArc({ startAngle, endAngle }))
+      .attr("fill", clusterColors(clusterName))
+      .attr("stroke", "#333")
+      .attr("stroke-width", 0.3)
+      .attr("opacity", 0.4)
+      .style("cursor", "pointer")
+      .on("click", () => {
+        const clusterPosts = postNodes.filter(n => n.cluster === clusterName);
+        const panelHtml = `
+          <div class="post-box">
+            <h3>Cluster ${clusterName}</h3>
+            ${clusterPosts.map(post => {
+              const meta = data.meta[post.id];
+              if (!meta) return '';
+              return `
+                <div class="post-list-item">
+                  <strong>@${meta.username}</strong><br>
+                  <p>"${meta.full_message}"</p>
+                  <div class="post-meta">❤️ ${meta.likes} 💬 ${meta.comments}</div>
+                  <a class="post-link" href="${meta.url}" target="_blank">🔗 Ver no Instagram</a>
+                  <hr>
+                </div>
+              `;
+            }).join('')}
+          </div>
+        `;
+        showChordPanelContent(panelHtml);
+      });
+
+      const midAngle = (startAngle + endAngle) / 2;
+      const labelRadius = outerRadius + 25;
+      const x = Math.sin(midAngle) * labelRadius;
+      const y = -Math.cos(midAngle) * labelRadius;
+
+      svg.append("text")
+        .attr("x", x)
+        .attr("y", y)
+        .attr("text-anchor", "middle")
+        .attr("alignment-baseline", "middle")
+        .style("font-size", "10px")
+        .style("fill", "#aaa")
+        .style("pointer-events", "none")
+        .text(`Cluster ${clusterName}`);
+    }
+  });
+  
+
   group.append("path")
     .attr("fill", d => fullNodes[d.index].color)
     .attr("d", arc)
-    .on("mouseover", function(event, d) {
+    .on("mouseover", function (event, d) {
       const meta = data.meta[fullNodes[d.index].id];
       if (meta) {
         d3.select(this)
@@ -53,10 +124,29 @@ function drawChord(data) {
           .style("top", (event.pageY - 28) + "px");
       }
     })
-    .on("mouseout", function() {
+    .on("mouseout", function () {
       d3.select(this).attr("stroke", null);
       d3.select("#tooltip").style("display", "none");
     });
+
+  group.append("text")
+    .each(function (d) {
+      d.angle = (d.startAngle + d.endAngle) / 2;
+    })
+    .attr("dy", ".35em")
+    .attr("transform", function (d) {
+      const rotate = d.angle * 180 / Math.PI - 90;
+      const radius = outerRadius + 14;
+      return `rotate(${rotate}) translate(${radius}) ${d.angle > Math.PI ? "rotate(180)" : ""}`;
+    })
+    .attr("text-anchor", function (d) {
+      return d.angle > Math.PI ? "end" : "start";
+    })
+    .text(function (d) {
+      return fullNodes[d.index].label;
+    })
+    .style("font-size", "9px")
+    .style("fill", "#ccc");
 
   svg.append("g")
     .attr("fill-opacity", 0.75)
@@ -86,7 +176,7 @@ function drawChord(data) {
           <p><span class="badge">Cluster ${meta.cluster}</span></p>
           <a class="post-link" href="${meta.url}" target="_blank">🔗 Ver no Instagram</a>
         </div>
-      `;    
+      `;
     } else if (node.type === "user") {
       panelHtml = `
         <div class="post-box">
@@ -95,7 +185,7 @@ function drawChord(data) {
           Tipo: Usuário</p>
         </div>
       `;
-    }    
+    }
 
     showChordPanelContent(panelHtml);
   });
@@ -140,7 +230,7 @@ function showChordPanelContent(htmlContent) {
     }
     d3.select("#panel-chord-content").html(htmlContent);
     d3.select("#panel-chord-data").classed("show", true);
-    
+
   } else {
     console.warn("🔒 Painel da Section3 bloqueado: section3 não está visível.");
   }
