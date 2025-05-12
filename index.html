@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DataViz RGDS</title>
-  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="interface.js" defer></script>
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -70,105 +70,19 @@
     </div>
   </section>
 
-  <!-- GRAFO SECTION -->
-  <section id="grafo-section">
-    <div id="overlay-grafo">
-      <button id="btn-ver-grafo">explore🌐</button>
-    </div>
-
-    <div id="grafo-container">
-      <div id="zoom-controls">
-        <button id="zoom-in">＋</button>
-        <button id="zoom-out">－</button>
-        <button id="zoom-reset">⭯</button>
+  <!-- SECTION 2 - BOTÕES -->
+  <section id="section2">
+    <div class="section2-content">
+      <h2 class="section2-title">Explore as visualizações</h2>
+      <div class="section2-buttons">
+        <a href="./radial/grafo.html" class="nav-btn">Ver grafo</a>
+        <a href="./chord/chord.html" class="nav-btn">Ver diagrama</a>
       </div>
-
-      <div class="legend-container">
-        <div class="legend-title">📌 Legenda</div>
-        <div class="legend-items"></div>
-      </div>
-
-      <div class="rotation-control">
-        <label for="rotation-slider">Rotação:</label>
-        <input type="range" id="rotation-slider" min="0" max="360" value="0" step="1">
-        <span id="rotation-value">0°</span>
-      </div>
-
-      <div id="mini-menu">
-        <button class="mini-tab" data-action="explore">🔍 Explorar Cluster</button>
-      </div>
-
-      <!-- Painel Explorar Cluster -->
-      <div id="explorar-cluster-panel">
-        <button id="close-explorar" class="close-btn">✖</button>
-        <h2>🔍 Explorar Cluster</h2>
-
-        <!-- Dropdown para selecionar cluster -->
-        <select id="cluster-select">
-          <option value="">Selecione um cluster...</option>
-        </select>
-
-        <!-- Informações rápidas do cluster -->
-        <div id="cluster-info" class="cluster-info">
-          <h4>📈 Dados Gerais do Cluster</h4>
-          <p>Total Coletado: -</p>
-          <p>Total de Autores: -</p>
-          <p>Likes Médios: -</p>
-          <p>Comentários Médios: -</p>
-          <p>Engajamento Médio: -</p>
-          <p>Top Autor: -</p>
-        </div>
-
-        <!-- Posts relevantes do cluster -->
-        <div id="cluster-posts" class="cluster-posts">
-          <h4>📌 Posts do Cluster</h4>
-          <p>Selecione um cluster para visualizar os posts...</p>
-        </div>
-
-        <div class="post-card">
-          <p class="author">@usuario</p>
-          <p class="post-text">"Mensagem do post..."</p>
-          <div class="post-meta">❤️ likes 💬 comentários 🔁 engajamento</div>
-          <a class="post-link" href="..." target="_blank">🔗 Ver no Instagram</a>
-        </div>
-
-      </div>
-
-      <div id="post-popup" class="popup hidden">
-        <div class="popup-content">
-          <span id="popup-close" class="popup-close">✖</span>
-          <h3 id="popup-author">@autor</h3>
-          <p id="popup-message">Texto completo do post...</p>
-          <div id="popup-meta">❤️ 0 💬 0 🔁 0</div>
-          <a id="popup-link" href="#" target="_blank">🔗 Ver no Instagram</a>
-        </div>
-      </div>
-
     </div>
   </section>
 
-  <!-- CHORD DIAGRAM SECTION -->
-  <section id="section3">   
-    <div id="chart" style="width: 100%; height: 100vh;"></div>
-
-    <div id="panel-chord-data">
-      <div id="panel-chord-content">
-        <section>
-          <p>Click in the graph to see more</p>
-        </section>
-      </div>
-    </div>    
-
-    <div id="tooltip" style="position: absolute; display: none; background: #fff; padding: 8px; border-radius: 6px; font-size: 12px; box-shadow: 0 0 5px rgba(0,0,0,0.2); z-index: 100;"></div>
-
-  </section>
 
 
-  <!-- Scripts -->
-  <script src="https://unpkg.com/circos@latest/dist/circos.min.js"></script>
-  <script src="interface.js"></script>
-  <script type="module" src="script_chord.js"></script>
-  <script src="script_grafo.js"></script>
 </body>
 
 </html>

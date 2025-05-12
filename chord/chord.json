@@ -2004,5 +2004,13 @@
       "likes": 7556,
       "comments": 276
     }
+  },
+  "clusterDescriptions": {
+    "Ajuda durante a enchente, ou desvio de ajuda": "Descrição do Ajuda durante a enchente, ou desvio de ajuda aqui...",
+    "Enchente - Rio Grande do Sul": "Descrição do Enchente - Rio Grande do Sul aqui...",
+    "Imprensa e redes sociais": "Descrição do Imprensa e redes sociais aqui...",
+    "Racismo ambiental": "Descrição do Racismo ambiental aqui...",
+    "Racismo ambiental e Enchente do Rio Grande do Sul": "Descrição do Racismo ambiental e Enchente do Rio Grande do Sul aqui...",
+    "Rio de Janeiro": "Descrição do Rio de Janeiro aqui..."
   }
 }

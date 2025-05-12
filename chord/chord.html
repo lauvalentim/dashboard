@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Diagrama de Corda</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <link rel="stylesheet" href="chord.css">
+</head>
+<body>
+<a id="back-button" href="../index.html">back</a>
+ 
+<!-- CHORD DIAGRAM SECTION -->
+  <section id="section3">   
+    <div id="chart" style="width: 100%; height: 100vh;"></div>
+
+    <div id="panel-chord-data">
+      <div id="panel-chord-content">
+        <section>
+          <p>Click in the graph to see more</p>
+        </section>
+      </div>
+    </div>    
+
+    <div id="tooltip" style="position: absolute; display: none; background: #fff; padding: 8px; border-radius: 6px; font-size: 12px; box-shadow: 0 0 5px rgba(0,0,0,0.2); z-index: 100;"></div>
+
+  </section>
+  <!-- Scripts -->
+  <script src="script_chord.js" type="module"></script>
+</body>
+</html>

@@ -1,5 +1,25 @@
 function drawGraph() {
 
+  // === Botão Explorar Cluster ===
+document.addEventListener("DOMContentLoaded", () => {
+  const exploreBtn = document.querySelector('[data-action="explore"]');
+  const panel = document.getElementById("explorar-cluster-panel");
+  const closeBtn = document.getElementById("close-explorar");
+
+  if (exploreBtn && panel) {
+    exploreBtn.addEventListener("click", () => {
+      panel.classList.add("open");
+    });
+  }
+
+  if (closeBtn && panel) {
+    closeBtn.addEventListener("click", () => {
+      panel.classList.remove("open");
+    });
+  }
+});
+
+
   if (window.initInterface) {
     window.initInterface();
   }
@@ -59,7 +79,7 @@ function drawGraph() {
       (values);
 
     window.root = root;
-    const tree = d3.tree().size([2 * Math.PI, 300]);
+    const tree = d3.tree().size([2 * Math.PI, 250]);
     tree(root);
 
     if (window.setRootNode) {
@@ -94,8 +114,8 @@ function drawGraph() {
       .data(root.links())
       .enter().append("path")
       .attr("fill", "none")
-      .attr("stroke", "#ccc")
-      .attr("stroke-width", 2)
+      .attr("stroke", "#C0C0C0")
+      .attr("stroke-width", 1)
       .attr("stroke-opacity", 0.9)
       .attr("d", d3.linkRadial()
         .angle(d => d.x)
@@ -548,5 +568,38 @@ window.addEventListener('scroll', () => {
     if (popup && !popup.classList.contains("hidden")) {
       popup.classList.add("hidden");
     }
+  }
+});
+
+// === Botão Explorar Cluster (deve ser definido fora do drawGraph para garantir execução imediata) ===
+document.addEventListener("DOMContentLoaded", () => {
+  const exploreBtn = document.querySelector('[data-action="explore"]');
+  const panel = document.getElementById("explorar-cluster-panel");
+  const closeBtn = document.getElementById("close-explorar");
+
+  if (exploreBtn && panel) {
+    exploreBtn.addEventListener("click", () => {
+      panel.classList.add("open");
+    });
+  }
+
+  if (closeBtn && panel) {
+    closeBtn.addEventListener("click", () => {
+      panel.classList.remove("open");
+    });
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const clusterSelect = document.getElementById("cluster-select");
+
+  if (clusterSelect) {
+    clusterSelect.addEventListener("change", () => {
+      const clusterName = clusterSelect.value;
+      if (clusterName) {
+        updateClusterInfo(clusterName);
+        updateClusterPosts(clusterName);
+      }
+    });
   }
 });
