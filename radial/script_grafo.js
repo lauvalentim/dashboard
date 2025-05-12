@@ -133,12 +133,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const parentColors = {
       "Narrativas": "#ccc",
-      "Racismo": "rgb(204, 4, 4)",
-      "Racismo + Enchentes": "rgb(166, 5, 118)",
-      "Enchente RS": "rgb(24, 77, 250)",
-      "Imprensa": "rgb(27, 111, 10)",
-      "RJ": "rgb(216, 152, 2)",
-      "Ajuda": "rgb(78, 4, 182)",
+      "Racismo": " #EB0101",
+      "Racismo + Enchentes": " #148718",
+      "Enchente RS":" #8800C3",
+      "Imprensa": " #006EFF",
+      "RJ": " #F95B00",
+      "Ajuda": " #FFBC00",
     };
 
     function adjustColor(color, depth) {

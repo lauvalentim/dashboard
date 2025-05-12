@@ -5,14 +5,14 @@ function closePanelChord() {
 }
 
 function drawChord(data) {
-  const width = Math.min(700, window.innerWidth * 0.8);
+  const width = Math.min(600, window.innerWidth * 0.6);
   const height = width;
   const innerRadius = Math.min(width, height) * 0.32;
   const outerRadius = innerRadius * 1.1;
 
   const svg = d3.select("#chart")
     .append("svg")
-    .attr("viewBox", [-width / 2 - 100, -height / 2, width, height]) // deslocamento para esquerda
+    .attr("viewBox", [-width / 2 - 5, -height / 2, width, height])
     .style("font", "10px sans-serif");
 
   svg.append("defs").append("filter")
@@ -24,6 +24,25 @@ function drawChord(data) {
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     `);
+
+  // Label para Postagens (lado superior esquerdo)
+  svg.append("text")
+    .attr("x", -width / 2 + 20)
+    .attr("y", -height / 2 + 20)
+    .text("Postagens")
+    .attr("fill", "#ccc")
+    .attr("font-size", "12px")
+    .attr("font-weight", "bold");
+
+  // Label para Usuários (lado inferior direito)
+  svg.append("text")
+    .attr("x", width / 2 - 80)
+    .attr("y", height / 2 - 10)
+    .text("Usuários")
+    .attr("fill", "#ccc")
+    .attr("font-size", "12px")
+    .attr("font-weight", "bold");
+
 
   const fullNodes = data.ideograms;
   const idIndex = new Map(fullNodes.map((d, i) => [d.id, i]));
@@ -43,9 +62,24 @@ function drawChord(data) {
   const group = svg.append("g").selectAll("g").data(chord.groups).join("g");
 
   const clusterArc = d3.arc().innerRadius(outerRadius + 6).outerRadius(outerRadius + 16);
+  const clusterNameMap = {
+    "Ajuda durante a enchente, ou desvio de ajuda": "Cluster A",
+    "Enchente - Rio Grande do Sul": "Cluster B",
+    "Imprensa e redes sociais": "Cluster C",
+    "Racismo ambiental": "Cluster D",
+    "Racismo ambiental e Enchente do Rio Grande do Sul": "Cluster E",
+    "Rio de Janeiro": "Cluster F"
+  };
+
   const clusterColors = d3.scaleOrdinal()
     .domain(["Cluster A", "Cluster B", "Cluster C", "Cluster D", "Cluster E", "Cluster F"])
-    .range(["#ff6b6b", "#4ecdc4", "#ffe66d", "#a29bfe", "#ffb86b", "#6c5ce7"]);
+    .range(["#FFBC00", "#8800C3", "#006EFF", "#EB0101", "#25c206", "#F95B00"]);
+
+  const getClusterColor = node => {
+    const mapped = clusterNameMap[node.cluster];
+    return clusterColors(mapped || "Cluster A");
+  };
+
 
   const clusterMap = new Map();
   const postNodes = fullNodes.map((node, i) => ({ ...node, index: i })).filter(n => n.type === "post");
@@ -66,7 +100,7 @@ function drawChord(data) {
         .attr("fill", clusterColors(clusterName))
         .attr("stroke", "#000")
         .attr("stroke-width", 0.5)
-        .attr("fill-opacity", 0.6)
+        .attr("fill-opacity", 0.8)
         .attr("filter", "url(#glow)")
         .style("cursor", "pointer")
         .on("click", () => {
@@ -98,7 +132,8 @@ function drawChord(data) {
   });
 
   group.append("path")
-    .attr("fill", d => fullNodes[d.index].color)
+    .attr("fill", d => getClusterColor(fullNodes[d.index]))
+    .attr("fill-opacity", 0.6)
     .attr("d", arc)
     .style("cursor", "pointer")
     .on("mouseover", function (event, d) {
@@ -155,7 +190,8 @@ function drawChord(data) {
     .data(chord)
     .join("path")
     .attr("d", ribbon)
-    .attr("fill", d => fullNodes[d.target.index].color)
+    .attr("fill", d => getClusterColor(fullNodes[d.target.index]))
+    .attr("fill-opacity", 0.3)
     .attr("stroke", "#222")
     .attr("stroke-width", 0.3)
     .attr("stroke-opacity", 0.2)
@@ -202,3 +238,32 @@ window.addEventListener('scroll', () => {
     d3.select("#panel-chord-data").classed("show", false);
   }
 });
+
+function createClusterLegend() {
+  const clusterMap = {
+    "Cluster A": "#FFBC00",
+    "Cluster B": "#8800C3",
+    "Cluster C": "#006EFF",
+    "Cluster D": "#EB0101",
+    "Cluster E": "#25c206",
+    "Cluster F": "#F95B00"
+  };
+
+  const clusterLabels = {
+    "Cluster A": "Ajuda durante a enchente",
+    "Cluster B": "Enchente no RS",
+    "Cluster C": "Imprensa e redes sociais",
+    "Cluster D": "Racismo ambiental",
+    "Cluster E": "Racismo ambiental + RS",
+    "Cluster F": "Rio de Janeiro"
+  };
+
+  const legendList = d3.select("#legend-clusters ul");
+  Object.entries(clusterMap).forEach(([key, color]) => {
+    legendList.append("li")
+      .html(`<span style="background:${color}"></span>${clusterLabels[key]}`);
+  });
+}
+
+createClusterLegend();
+

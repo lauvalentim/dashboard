@@ -58,27 +58,23 @@ body {
 #back-button {
   position: absolute;
   top: 20px;
-  left: 30px;
-  padding: 12px 15px;
-  font-size: 15px;
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(10px);
-  border-radius: 50%;
-  color: rgb(114, 105, 105);
+  left: 20px;
+  padding: 10px 20px;
+  font-size: 14px;
+  background: transparent;
+  backdrop-filter: blur(3px);
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  color: #000;
+  border-radius: 6px;
   text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s ease;
-  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
   z-index: 10;
-  border-radius: 50%;
 }
 
 #back-button:hover {
-  background: rgba(63, 60, 60, 0.5);
-  transform: scale(1.05);
+  background: #232323;
+  color: #d1d1d1;
+  border: none;
 }
 
 /* Estilo do botão de abrir o menu */
@@ -145,30 +141,42 @@ body {
   position: absolute;
   bottom: 50px;
   right: 20px;
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 10px 20px;
+  background: transparent;
+  backdrop-filter: blur(3px);
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  color: #000;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
   font-family: Arial, sans-serif;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
   display: flex;
   align-items: center;
   gap: 10px;
+  z-index: 10;
+}
+
+.rotation-control:hover {
+  background: #1f1f1f;
+  color: #000000;
+  border:none;
 }
 
 .rotation-control label {
   font-size: 14px;
-  color: rgb(55, 55, 55);
+  color: rgb(80, 80, 80);
 }
 
-.rotation-control input {
+a .rotation-control input {
   width: 100px;
 }
 
 .rotation-control span {
   font-size: 13px;
   font-weight: bold;
-  color: rgb(55, 55, 55);
+  color: rgb(80, 80, 80);
 }
 
 /*Bloco de Leitura*/
@@ -266,11 +274,13 @@ section {
 }
 
 #grafo-section {
-  background-color: #fafaec8c;
-  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='1' cy='1' r='1' fill='%23cccccc'/%3E%3C/svg%3E");
+  height: 100vh;
+  position: relative;
+  background-color: #dedede;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.259) 1px, transparent 0);
   background-size: 20px 20px;
-  position: center;
-  overflow: visible;
+  background-position: 0 0;
+  overflow: hidden;
 }
 
 #grafo-container {
@@ -317,24 +327,23 @@ svg {
 }
 
 .mini-tab {
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 12px;
+  background: transparent;
+  backdrop-filter: blur(3px);
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
   padding: 10px 20px;
-  font-size: 15px;
-  color: #504e4e;
+  font-size: 14px;
+  color: #000000;
   font-weight: 500;
   letter-spacing: 0.5px;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
 .mini-tab:hover {
-  background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-  transform: translateY(-2px);
+  background: #444;
+  color: #fff;
 }
 
 #grafo-container {
