@@ -1,0 +1,43 @@
+{
+  "resumo_geral": {
+    "total_usuarios": 50,
+    "total_postagens": 50,
+    "clusters_principais": 6,
+    "maior_engajamento_usuario": {
+      "id": "ibsustentabilidade",
+      "engajamento": 206892
+    },
+    "post_mais_engajado": {
+      "id": "Instituto Brasileiro de Sustentabilidade - INBS",
+      "engajamento": 68006,
+      "likes": 136012,
+      "comments": 2434
+    }
+  },
+  "engajamento_por_cluster": [
+    {
+      "cluster": "Ajuda durante a enchente, ou desvio de ajuda",
+      "media_engajamento": 5826.0
+    },
+    {
+      "cluster": "Enchente - Rio Grande do Sul",
+      "media_engajamento": 13882.7
+    },
+    {
+      "cluster": "Imprensa e redes sociais",
+      "media_engajamento": 11675.611111111111
+    },
+    {
+      "cluster": "Racismo ambiental",
+      "media_engajamento": 16669.333333333332
+    },
+    {
+      "cluster": "Racismo ambiental e Enchente do Rio Grande do Sul",
+      "media_engajamento": 27426.666666666668
+    },
+    {
+      "cluster": "Rio de Janeiro",
+      "media_engajamento": 10772.25
+    }
+  ]
+}

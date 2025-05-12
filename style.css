@@ -431,6 +431,19 @@ body {
   color: #fff;
 }
 
+.section2-gif {
+  position: relative;
+  bottom: 20px;
+  right: 8px;
+  z-index: 999;
+}
+
+.section2-gif img {
+  width: 120px;
+  height: auto;
+  opacity: 0.8;
+}
+
 /* Barra de rolagem refinada */
 ::-webkit-scrollbar {
   width: 10px;

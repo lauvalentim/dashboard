@@ -276,7 +276,7 @@ section {
 #grafo-section {
   height: 100vh;
   position: relative;
-  background-color: #dedede;
+  background-color: #f0faff6b;
   background-image: radial-gradient(rgba(0, 0, 0, 0.259) 1px, transparent 0);
   background-size: 20px 20px;
   background-position: 0 0;
