@@ -204,6 +204,7 @@ body {
   max-width: 600px;
   width: 100%;
   text-align: justify;
+  align-items: center;
 }
 
 /* Estiliza a barra de rolagem na vertical */
@@ -461,3 +462,56 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(60, 59, 59);
 }
+
+/*Lista do Menu Inicial*/
+
+  .tabela-clusters {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: sans-serif;
+    margin-top: 1rem;
+    font-size: 0.80rem;
+    color: rgb(54, 54, 54);
+  }
+
+  .tabela-clusters th,
+  .tabela-clusters td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    vertical-align: top;
+    text-align: left;
+  }
+
+  .tabela-clusters th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+
+  .tabela-clusters tr:nth-child(even) {
+    background-color: #fafafa;
+  }
+
+  @media (max-width: 768px) {
+    .tabela-clusters thead {
+      display: none;
+    }
+
+    .tabela-clusters tr {
+      display: block;
+      margin-bottom: 1rem;
+      border: 1px solid #ddd;
+    }
+
+    .tabela-clusters td {
+      display: block;
+      text-align: left;
+    }
+
+    .tabela-clusters td::before {
+      content: attr(data-label);
+      font-weight: bold;
+      display: block;
+      margin-bottom: 4px;
+      color: #555;
+    }
+  }

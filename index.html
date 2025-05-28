@@ -27,42 +27,238 @@
 
       <div id="info-menu">
         <h2>Menu de Informações</h2>
-        <button class="info-tab" data-tab="general">Análise Geral</button>
-        <button class="info-tab" data-tab="context">Base de Dados</button>
-        <button class="info-tab" data-tab="graph">Organização do Grafo</button>
-        <button class="info-tab" data-tab="tools">Ferramentas Utilizadas</button>
+        <button class="info-tab" data-tab="general">🟡 Análise Geral 🟡</button>
+        <button class="info-tab" data-tab="context">🟢 Base de Dados 🟢</button>
+        <button class="info-tab" data-tab="graph">🔵 Organização do Grafo 🔵</button>
+        <button class="info-tab" data-tab="tools">🔴 Ferramentas Utilizadas 🔴</button>
       </div>
 
       <div id="info-content">
         <div class="info-section" id="general">
           <button class="back-to-menu">🡄</button>
           <div class="info-wrapper">
-            <h3>🟡 Análise Geral</h3>
-            <p>...</p>
+            <h3>🟡 Análise Geral 🟡</h3>
+            <p>
+              O projeto propõe uma leitura visual da circulação de conteúdos sobre a enchente no Rio Grande do Sul,
+              explorando como diferentes temas, usuários e publicações se conectam e formam narrativas digitais. Para
+              isso, foram desenvolvidas duas visualizações interativas: um grafo radial e um diagrama de corda. Ambas
+              foram geradas a partir de um dataset processado com ferramentas automatizadas e scripts em Python, que
+              organizaram os dados e aplicaram métricas de engajamento (curtidas + comentários) como critério central
+              para destaque dos nós.
+            </p>
+            <p>
+              A proposta dessas visualizações é tornar acessível a análise de redes complexas, com foco em temas como
+              racismo ambiental, desinformação e atuação de influenciadores durante a crise. A combinação entre
+              estrutura estética e funcional permite ao usuário explorar interativamente o conteúdo, reconhecendo
+              padrões de centralidade, autoria e impacto narrativo.
+            </p>
+
+            <h4>Critérios analíticos de clusterização</h4>
+            <p>
+              A clusterização dos conteúdos foi baseada na combinação entre termos recorrentes, hashtags e contextos
+              temáticos, resultando em seis grupos interpretativos. A seguir, apresentamos um resumo dos clusters, com
+              suas respectivas conceituações e argumentos analíticos:
+            </p>
+
+            <table class="tabela-clusters">
+              <thead>
+                <tr>
+                  <th>Cluster</th>
+                  <th>Conceituação</th>
+                  <th>Argumento analítico</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Ajuda durante a enchente, ou desvio de ajuda</td>
+                  <td>Publicações que denunciam problemas na distribuição de recursos, corrupção, ausência do Estado ou
+                    ineficiência da logística de ajuda.</td>
+                  <td>Evidencia a atuação desigual do poder público e a mobilização autônoma da população. Mostra como o
+                    apagamento das comunidades racializadas também se dá pela falta de assistência.</td>
+                </tr>
+                <tr>
+                  <td>Enchente - Rio Grande do Sul</td>
+                  <td>Postagens com foco geral na tragédia, volume de chuva e imagens de destruição. Narrativas amplas e
+                    impessoais.</td>
+                  <td>Representa o discurso hegemônico que naturaliza a tragédia, sem abordar desigualdades estruturais
+                    como raça e classe. Serve de contraponto aos clusters mais críticos.</td>
+                </tr>
+                <tr>
+                  <td>Imprensa e redes sociais</td>
+                  <td>Conteúdos que falam sobre a tragédia do Rio Grande do Sul, e foram veiculados nas redes sociais.
+                    Ou conteúdos que discutem o papel da mídia e das redes na visibilidade (ou não) das comunidades
+                    atingidas.</td>
+                  <td>Mostra a disputa de narrativas entre mídia tradicional e mídias alternativas. Enfatiza o papel das
+                    redes sociais na denúncia e mobilização coletiva.</td>
+                </tr>
+                <tr>
+                  <td>Racismo ambiental</td>
+                  <td>Publicações que utilizam explicitamente a hashtag ou o conceito de racismo ambiental para
+                    denunciar desigualdades raciais em tragédias.</td>
+                  <td>É o núcleo crítico da rede, onde se articula o discurso político sobre desigualdade estrutural e
+                    justiça ambiental. Reflete maior consciência racializada do problema.</td>
+                </tr>
+                <tr>
+                  <td>Racismo ambiental e Enchente do RS</td>
+                  <td>Intersecção entre os discursos sobre a enchente e o racismo ambiental, incluindo denúncias
+                    quilombolas.</td>
+                  <td>Cluster central na articulação entre território e raça. Mostra como as narrativas quilombolas
+                    ganham visibilidade em certos momentos, embora ainda sejam periféricas no todo da rede.</td>
+                </tr>
+                <tr>
+                  <td>Rio de Janeiro</td>
+                  <td>Postagens que comparam ou mencionam tragédias anteriores (como as enchentes no RJ) para traçar
+                    paralelos com o RS.</td>
+                  <td>Indica a memória social e o padrão recorrente das tragédias em áreas racializadas. Reforça o
+                    argumento de que não são casos isolados, mas estruturais.</td>
+                </tr>
+              </tbody>
+            </table>
+
           </div>
         </div>
 
         <div class="info-section" id="context">
           <button class="back-to-menu">🡄</button>
           <div class="info-wrapper">
-            <h3>🟢 Base de Dados</h3>
-            <p>Seu conteúdo aqui...</p>
+            <h3>🟢 Base de Dados 🟢</h3>
+            <p>
+              A base de dados utilizada foi coletada via Meta Content Library e organizada com o auxílio do software
+              Ford, desenvolvido pelo Labic (Laboratório de Internet e Ciência de Dados da Universidade Federal do
+              Espírito Santo). Inicialmente, o dataset bruto passou por etapas automatizadas de
+              tratamento e padronização (column_fix e search_url), garantindo consistência e completude das colunas.
+            </p>
+            <p>
+              Após a limpeza, manteve-se um conjunto de colunas essenciais, como nome de usuário, mensagem, número de
+              curtidas, comentários, cluster temático e link da postagem. Uma métrica de engajamento foi criada a partir
+              da soma ponderada de curtidas e comentários, permitindo ranquear os posts por relevância. A base final
+              continha 866 registros, organizados em seis clusters temáticos, refletindo diferentes abordagens sobre a
+              enchente e temas correlatos, como racismo ambiental e imprensa digital.
+            </p>
           </div>
         </div>
 
         <div class="info-section" id="graph">
           <button class="back-to-menu">🡄</button>
           <div class="info-wrapper">
-            <h3>🔵 Organização do Grafo</h3>
-            <p>Seu conteúdo aqui...</p>
+            <h3>🔵 Organização do Grafo 🔵</h3>
+
+            <h4>Grafo Radial</h4>
+            <p>
+              O grafo radial foi construído com base em uma estrutura hierárquica que organiza os dados em quatro
+              níveis: o nó central (“Narrativas”), os clusters temáticos, os autores e suas postagens. Essa estrutura
+              foi extraída a partir de um dataset limpo, filtrado e reformatado em JSON com auxílio de scripts em
+              Python.
+            </p>
+            <p>
+              Para garantir legibilidade e foco analítico, selecionaram-se os 15% de postagens com maior engajamento
+              (curtidas + comentários) por cluster. Cada cluster foi representado por uma cor distinta, e os rótulos dos
+              posts foram abreviados para evitar sobrecarga visual. A interatividade inclui zoom, rotação e painel
+              lateral com detalhes das postagens. Ao selecionar um cluster no menu, o leitor tem acesso a estatísticas
+              específicas como número de autores e engajamento médio.
+            </p>
+            <p>
+              A disposição circular facilita a compreensão das hierarquias e padrões de recorrência temática, revelando
+              a dinâmica narrativa dos conteúdos analisados.
+            </p><br>
+
+            <h5>📊 Ferramentas utilizadas no grafo radial</h5><br>
+            <ul>
+              <li><strong>Ford (Labic):</strong> Processamento e organização do dataset (column_fix, search_url).</li>
+              <li><strong>Python:</strong> Geração do JSON e aplicação do filtro de engajamento.</li>
+              <li><strong>D3.js:</strong> Construção da visualização com layout em árvore (tree layout radial).</li>
+              <li><strong>HTML + CSS:</strong> Estrutura e estilo da interface interativa.</li>
+              <li><strong>JavaScript:</strong> Interações como zoom, rotação, clique e filtros por cluster.</li>
+            </ul>
+
+            <hr>
+
+            <h4>Diagrama de Corda</h4>
+            <p>
+              O diagrama de corda representa as conexões entre usuários e suas postagens mais relevantes sobre a
+              enchente no RS. A estrutura baseia-se em três blocos principais: <strong>ideograms</strong> (nós),
+              <strong>links</strong> (conexões) e <strong>meta</strong> (metadados).
+            </p>
+            <p>
+              Foram selecionados os 50 posts com maior engajamento, agrupados por autores e temas. Os nós são
+              distribuídos em torno de um círculo, com links curvos que ligam os usuários às postagens. Cada cluster tem
+              cor própria e as postagens exibem informações completas ao clique, como autor, conteúdo, métricas e link.
+              É possível também ativar a exibição de todos os posts de um cluster ao clicar em setores externos do
+              grafo.
+            </p>
+            <p>
+              Essa visualização destaca os padrões de autoria e intensidade de engajamento, revelando os perfis mais
+              centrais e os temas mais mobilizadores da rede. Sua estética foi pensada para equilibrar densidade
+              informacional e clareza visual.
+            </p><br>
+
+            <h5>📊 Ferramentas utilizadas no diagrama de corda</h5><br>
+            <ul>
+              <li><strong>Ford (Labic):</strong> Organização e tratamento inicial do dataset.</li>
+              <li><strong>Python:</strong> Estruturação do JSON, filtragem e agrupamento por engajamento.</li>
+              <li><strong>D3.js:</strong> Construção do diagrama circular com interações visuais dirigidas.</li>
+              <li><strong>HTML + CSS:</strong> Painel lateral, layout visual e organização dos dados.</li>
+              <li><strong>JavaScript:</strong> Controle da visualização interativa, animações, filtros e destaque de
+                conexões.</li><br>
+            </ul>
           </div>
+
         </div>
 
         <div class="info-section" id="tools">
           <button class="back-to-menu">🡄</button>
           <div class="info-wrapper">
-            <h3>🔴 Ferramentas Utilizadas</h3>
-            <p>Seu conteúdo aqui...</p>
+            <h3>🔴 Ferramentas Utilizadas 🔴</h3>
+            <p>
+              A construção das visualizações interativas exigiu uma série de ferramentas, que atuaram em diferentes
+              etapas: desde a organização e limpeza dos dados, até o design visual e as interações no navegador. Abaixo,
+              explicamos brevemente cada uma delas e seu papel dentro do projeto.
+            </p>
+
+            <h4>🛠️ Ford (Labic)</h4>
+            <p>
+              Ferramenta desenvolvida pelo Laboratório de Internet e Ciência de Dados da UFES. Foi usada para
+              <strong>tratar e organizar o banco de dados bruto</strong>, corrigindo colunas e buscando links originais
+              das postagens. Isso garantiu que os dados estivessem padronizados e prontos para análise, evitando erros e
+              facilitando a visualização.
+            </p>
+
+            <h4>🐍 Python</h4>
+            <p>
+              Linguagem de programação que permitiu <strong>processar os dados e gerar os arquivos necessários para os
+                grafos</strong>. Com ela, foram aplicados filtros para destacar apenas os posts mais relevantes (com
+              mais curtidas e comentários), além de organizar as informações em estruturas lógicas (JSON) compatíveis
+              com os gráficos interativos.
+            </p>
+
+            <h4>📊 D3.js</h4>
+            <p>
+              Biblioteca de JavaScript especializada em visualizações de dados. Foi utilizada para <strong>criar os dois
+                grafos principais do projeto: o grafo radial e o diagrama de corda</strong>. Essa ferramenta é poderosa
+              porque permite representar dados de maneira visualmente atraente, interativa e personalizável.
+            </p>
+
+            <h4>💻 HTML + CSS</h4>
+            <p>
+              HTML é a linguagem que estrutura a página do site, enquanto o CSS define a aparência visual (cores,
+              tamanhos, espaçamentos). Com essas linguagens foi possível <strong>montar a interface da visualização,
+                estilizar botões, painéis e textos</strong>, garantindo uma navegação fluida e intuitiva.
+            </p>
+
+            <h4>🧠 JavaScript</h4>
+            <p>
+              Linguagem de programação usada no navegador para <strong>tornar o site interativo</strong>. Foi essencial
+              para permitir ações como <strong>clicar em um nó e abrir detalhes da postagem</strong>, girar o grafo
+              radial, filtrar por categorias ou exibir os dados de um cluster inteiro. Também controla animações, menus
+              e respostas aos movimentos do usuário.
+            </p>
+
+            <hr>
+            <p>
+              A combinação dessas ferramentas permitiu que dados complexos se transformassem em <strong>representações
+                visuais acessíveis e compreensíveis</strong>, conectando informações técnicas com leitura pública e
+              crítica sobre as narrativas em torno da enchente no Rio Grande do Sul.
+            </p>
           </div>
         </div>
       </div>
