@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
       (values);
 
     window.root = root;
-    const tree = d3.tree().size([2 * Math.PI, 250]);
+    const tree = d3.tree().size([2* Math.PI, 250]);
     tree(root);
 
     if (window.setRootNode) {
