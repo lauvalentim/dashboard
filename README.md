@@ -43,4 +43,4 @@ HTML/CSS for structure and styling
 
 Access Link: https://lauvalentim.github.io/dashboard/index.html
 
-![Demonstração do Grafo](./assets/demo-grafos.giff)
+![Demonstração do Grafo](./assets/demo-grafos.gif)
