@@ -2,6 +2,8 @@ pt-br
 
 Dashboard de Visualização de Racismo Ambiental
 
+*Trabalho desenvolvido em colaboração: Uandyléia Dias e Laura Valentim*
+
 Este projeto apresenta um dashboard interativo desenvolvido para a análise de dados relacionados ao racismo ambiental. A visualização é composta por dois tipos de grafos: Diagrama de Corda e Grafo Radial, ambos projetados para destacar as conexões entre os elementos e os padrões de interação dentro do contexto de desigualdade e exclusão ambiental enfrentada por comunidades marginalizadas.
 
 O Diagrama de Corda permite explorar as relações entre diferentes entidades, enquanto o Grafo Radial oferece uma visão dinâmica e intuitiva das conexões de centralidade e influência, facilitando a identificação de áreas e atores mais impactados por essas questões. O projeto visa fornecer uma ferramenta acessível e interativa para entender os aspectos sociais e ambientais do racismo e suas repercussões na organização do espaço urbano.
@@ -22,6 +24,8 @@ Link para acesso: https://lauvalentim.github.io/dashboard/index.html
 en-us
 
 Environmental Racism Dashboard
+
+*Work developed in collaboration: Uandyléia Dias and Laura Valentim*
 
 This project presents an interactive dashboard developed for analyzing data related to environmental racism. The visualization consists of two types of graphs: Chord Diagram and Radial Graph, both designed to highlight the connections between elements and patterns of interaction within the context of inequality and environmental exclusion faced by marginalized communities.
 
